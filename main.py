@@ -8,7 +8,6 @@ from sc_client.client import connect
 url = "ws://localhost:8090/ws_json"
 connect(url)
 
-#:clown_face:
 def extract_arg(arg):
     buffer = arg.split()
     bufferDict = {}
