@@ -1,0 +1,6 @@
+db.workCollecton.insertOne(
+{
+    name: "test",
+    _id: ObjectId("testWorkIdqweqweqweqewee")
+}
+)
