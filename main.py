@@ -2,8 +2,8 @@ import telebot
 from telebot import types
 import emoji
 import pymongo
-
-
+# Churki top za svoi den'gi da
+from sc_client.constants import sc_types
 from sc_client.client import connect
 url = "ws://localhost:8090/ws_json"
 connect(url)
