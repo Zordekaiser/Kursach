@@ -1,0 +1,16 @@
+concept_sensor
+   => nrel_main_idtf:
+    [Sensor]
+    (* <- lang_en;; <- name_en;;*);
+    [Сенсор]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;
+
+definition -> ...
+(*
+  -> rrel_key_sc_element: concept_sensor;;
+  <= nrel_sc_text_translation: ...
+    (*
+      -> rrel_example:
+        [Сенсор — средство непосредственного измерения физического, химического параметра](*<- lang_ru;;*);;
+    *);;
+*);;

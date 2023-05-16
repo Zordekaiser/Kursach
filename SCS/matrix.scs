@@ -1,0 +1,16 @@
+concept_matrix
+   => nrel_main_idtf:
+    [Matrix]
+    (* <- lang_en;; <- name_en;;*);
+    [Матрица]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;
+
+definition -> ...
+(*
+  -> rrel_key_sc_element: concept_matrix;;
+  <= nrel_sc_text_translation: ...
+    (*
+      -> rrel_example:
+        [Устройство воспроизведения изображений](*<- lang_ru;;*);;
+    *);;
+*);;

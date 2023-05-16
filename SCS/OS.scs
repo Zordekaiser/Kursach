@@ -1,0 +1,16 @@
+concept_OS
+   => nrel_main_idtf:
+    [OS]
+    (* <- lang_en;; <- name_en;;*);
+    [ОС]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;
+
+definition -> ...
+(*
+  -> rrel_key_sc_element: concept_OS;;
+  <= nrel_sc_text_translation: ...
+    (*
+      -> rrel_example:
+        [Набор программ для взаимодействия человека и смартфона](*<- lang_ru;;*);;
+    *);;
+*);;

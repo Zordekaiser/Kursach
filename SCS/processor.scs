@@ -1,0 +1,16 @@
+concept_processor
+   => nrel_main_idtf:
+    [Processor]
+    (* <- lang_en;; <- name_en;;*);
+    [Процессор]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;
+
+definition -> ...
+(*
+  -> rrel_key_sc_element: concept_processor;;
+  <= nrel_sc_text_translation: ...
+    (*
+      -> rrel_example:
+        [Электронный блок либо интегральная схема, исполняющая машинные инструкции, главная часть аппаратного обеспечения смартфона](*<- lang_ru;;*);;
+    *);;
+*);;

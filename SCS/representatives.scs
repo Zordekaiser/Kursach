@@ -1,0 +1,6 @@
+concept_representatives
+   => nrel_main_idtf:
+    [Representatives]
+    (* <- lang_en;; <- name_en;;*);
+    [Представители на рынке]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;

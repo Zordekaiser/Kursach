@@ -1,0 +1,26 @@
+concept_smartphone_knowledge_base
+   => nrel_main_idtf:
+    [Smartphone knowledge base]
+    (* <- lang_en;; <- name_en;;*);
+    [База знаний по смарфонам]
+    (* <- lang_ru;; <- name_ru;; <- name;;*);;
+
+definition -> ...
+(*
+  -> rrel_key_sc_element: concept_smartphone_knowledge_base;;
+  <= nrel_sc_text_translation: ...
+    (*
+      -> rrel_example:
+        [База знаний предоставляющая подробную информацию о смартфонах и представителях на рынке](*<- lang_ru;;*);;
+
+    *);;
+
+*);;
+concept_smartphone_knowledge_base->
+    concept_smartphone;
+    concept_processor;
+    concept_matrix;
+    concept_OS;
+    concept_camera;
+    concept_sensor;
+    concept_representatives;;
