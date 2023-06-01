@@ -1,0 +1,54 @@
+Xiaomi_Redmi_K50_Pro<-concept_smartphone;
+=>nrel_main_idtf:
+    [Xiaomi_Redmi_K50_Pro]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_OS:...(*
+   <- concept_OS;;
+       =>nrel_main_idtf: [Android](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Android](*<-lang_en;;*);;
+*);
+=>nrel_processor:...(*
+   <- concept_processor;;
+   =>nrel_main_idtf: [MediaTek_Dimensity_9000](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [MediaTek_Dimensity_9000](*<-lang_en;;*);;
+*);
+=>nrel_matrix:...(*
+   <- concept_matrix;;
+   =>nrel_main_idtf: [AMOLED](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [AMOLED](*<-lang_en;;*);;
+*);
+=>nrel_RAM:...(*
+   <- concept_RAM;;
+   =>nrel_main_idtf: [12](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [12](*<-lang_en;;*);;
+*);
+=>nrel_HDD:...(*
+   <- concept_HDD;;
+   =>nrel_main_idtf: [512](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [512](*<-lang_en;;*);;
+*);
+=>nrel_main_camera:...(*
+   <- concept_main_camera;;
+   =>nrel_main_idtf: [108](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [108](*<-lang_en;;*);;
+*);
+=>nrel_front_camera:...(*
+   <- concept_front_camera;;
+   =>nrel_main_idtf: [20](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [20](*<-lang_en;;*);;
+*);
+=>nrel_display_size:...(*
+   <- concept_display_size;;
+   =>nrel_main_idtf: [6.67](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [6.67](*<-lang_en;;*);;
+*);
+=>nrel_display_resolution:...(*
+   <- concept_display_resolution;;
+   =>nrel_main_idtf: [1440x3200](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [1440x3200](*<-lang_en;;*);;
+*);
+=>nrel_battery:...(*
+   <- concept_battery;;
+   =>nrel_main_idtf: [5000](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [5000](*<-lang_en;;*);;
+*);;

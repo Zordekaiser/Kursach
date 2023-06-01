@@ -28,76 +28,96 @@ for i in range(0, systemCollection.count_documents({"key": "smart_phone"})):
     MYstring += "]\n"
     file.write(MYstring)
     MYstring = "    "
-    file.write("    (* <- lang_en;; <- name_en;;*);\n")
-    file.write("=>nrel_OS:\n")
-    MYstring += "["
+    file.write("    (* <- lang_ru;; <- name_en;;*);\n")
+    file.write("=>nrel_OS:...(*\n   <- concept_OS;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["OS"]
-    MYstring += "]\n"
-    file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_OS;;*);\n")
-    file.write("=>nrel_processor:\n")
-    MYstring += "["
-    MYstring += buffer['processor']
-    MYstring += "]\n"
-    file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_processor;;*);\n")
-    file.write("=>nrel_matrix:\n")
-    MYstring += "["
-    MYstring += buffer['display']
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["OS"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
     MYstring = ""
-    file.write("    (* <- concept_matrix;;*);\n")
-    MYstring += "=>nrel_RAM:\n"
-    MYstring += "    ["
+    file.write("=>nrel_processor:...(*\n   <- concept_processor;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer['processor']
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer['processor']
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
+    file.write(MYstring)
+    MYstring = ""
+    file.write("=>nrel_matrix:...(*\n   <- concept_matrix;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer['display']
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer['display']
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
+    file.write(MYstring)
+    MYstring = ""
+    MYstring += "=>nrel_RAM:...(*\n   <- concept_RAM;;\n"
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["RAM"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["RAM"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_RAM;;<-exact_value;;*);\n")
-    file.write("=>nrel_HDD:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_HDD:...(*\n   <- concept_HDD;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["HDD"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["HDD"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_HDD;;<-exact_value;;*);\n")
-    file.write("=>nrel_main_camera:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_main_camera:...(*\n   <- concept_main_camera;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["main_camera"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["main_camera"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_camera;;<-exact_value;;*);\n")
-    file.write("=>nrel_front_camera:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_front_camera:...(*\n   <- concept_front_camera;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["front_camera"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["front_camera"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_camera;;<-exact_value;;*);\n")
-    file.write("=>nrel_display_size:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_display_size:...(*\n   <- concept_display_size;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["display_size"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["display_size"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_matrix;;<-exact_value;;*);\n")
-    file.write("=>nrel_display_resolution:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_display_resolution:...(*\n   <- concept_display_resolution;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["display_resolution"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["display_resolution"]
+    MYstring += "](*<-lang_en;;*);;\n*);\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_matrix;;<-exact_value;;*);\n")
-    file.write("=>nrel_battery:\n")
-    MYstring += "["
+    MYstring = ""
+    file.write("=>nrel_battery:...(*\n   <- concept_battery;;\n")
+    MYstring += "   =>nrel_main_idtf: ["
     MYstring += buffer["battery"]
-    MYstring += "]\n"
+    MYstring += "](*<-lang_ru;;*);;\n"
+    MYstring += "   =>nrel_main_idtf: ["
+    MYstring += buffer["battery"]
+    MYstring += "](*<-lang_en;;*);;\n*);;\n"
     file.write(MYstring)
-    MYstring = "    "
-    file.write("    (* <- concept_battery;;<-exact_value;;*);;\n")
+    MYstring = ""
 
     file.close()

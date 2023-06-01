@@ -31,7 +31,7 @@ def get_params_smartphone(_smartphone_name: str):
 
     try:
         smartphone_addr = ScKeynodes[_smartphone_name]
-    finally:
+    except:
         return False
     processor_relation_addr = ScKeynodes['nrel_processor']
     proc = get_system_idtf(get_element_by_norole_relation(smartphone_addr, processor_relation_addr))

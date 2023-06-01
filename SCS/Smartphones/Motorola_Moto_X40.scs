@@ -1,0 +1,54 @@
+Motorola_Moto_X40<-concept_smartphone;
+=>nrel_main_idtf:
+    [Motorola_Moto_X40]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_OS:...(*
+   <- concept_OS;;
+       =>nrel_main_idtf: [Android](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Android](*<-lang_en;;*);;
+*);
+=>nrel_processor:...(*
+   <- concept_processor;;
+   =>nrel_main_idtf: [Qualcomm_Snapdragon_8_Gen_2](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Qualcomm_Snapdragon_8_Gen_2](*<-lang_en;;*);;
+*);
+=>nrel_matrix:...(*
+   <- concept_matrix;;
+   =>nrel_main_idtf: [OLED](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [OLED](*<-lang_en;;*);;
+*);
+=>nrel_RAM:...(*
+   <- concept_RAM;;
+   =>nrel_main_idtf: [12](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [12](*<-lang_en;;*);;
+*);
+=>nrel_HDD:...(*
+   <- concept_HDD;;
+   =>nrel_main_idtf: [512](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [512](*<-lang_en;;*);;
+*);
+=>nrel_main_camera:...(*
+   <- concept_main_camera;;
+   =>nrel_main_idtf: [50](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [50](*<-lang_en;;*);;
+*);
+=>nrel_front_camera:...(*
+   <- concept_front_camera;;
+   =>nrel_main_idtf: [60](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [60](*<-lang_en;;*);;
+*);
+=>nrel_display_size:...(*
+   <- concept_display_size;;
+   =>nrel_main_idtf: [6.7](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [6.7](*<-lang_en;;*);;
+*);
+=>nrel_display_resolution:...(*
+   <- concept_display_resolution;;
+   =>nrel_main_idtf: [1080x2400](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [1080x2400](*<-lang_en;;*);;
+*);
+=>nrel_battery:...(*
+   <- concept_battery;;
+   =>nrel_main_idtf: [4600](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [4600](*<-lang_en;;*);;
+*);;

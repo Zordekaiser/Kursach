@@ -2,10 +2,19 @@ import telebot
 from telebot import types
 import emoji
 import pymongo
+from sc_client.client import connect, disconnect, create_elements
+from sc_kpm.utils import get_system_idtf, get_element_by_norole_relation, get_link_content_data
+from sc_kpm import ScKeynodes
 
-from sc_client.client import connect
 url = "ws://localhost:8090/ws_json"
 connect(url)
+
+
+def search(name_idt: str, name_link: str):
+    addr = ScKeynodes[name_idt]  # Вводим название смартфона  \\ адрес исходного
+    addr1 = ScKeynodes[name_link]  # Адрес дуги
+    addr2 = get_element_by_norole_relation(addr, addr1)  # Адрес конечного
+    return addr2
 
 def extract_arg(arg):
     buffer = arg.split()
@@ -33,7 +42,7 @@ dataCollection = current_db["dataCollection"]
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = "<i>Вас приветствует интеллектуальная система по мобильным телефонам!\nВыберите задачу:</i>"
+    mess = "<i>Вас приветствует интеллектуальная справочная система по мобильным телефонам!\nВыберите задачу:</i>"
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = types.KeyboardButton('Помоги подобрать телефон')
     button2 = types.KeyboardButton('Какие комплектующие телефона существуют?')
@@ -88,6 +97,14 @@ def func(message):
         button = types.KeyboardButton('Вернуться в главное меню')
         markup.add(button1, button2, button3, button4, button5, button)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+    elif message.text == 'Помоги подобрать телефон':
+        mess = "<i>Какой критерий у телефона важен?</i>"
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton('Хочу делать красивые фотографии')
+        button2 = types.KeyboardButton('Хочу смотреть фильмы и сериалы')
+        button = types.KeyboardButton('Вернуться в главное меню')
+        markup.add(button1, button2, button)
+        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Какие комплектующие телефона существуют?' or message.text == 'Вернуться к комплектующим':
         mess = "<i>Выберите интересующую комплектующую:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -100,6 +117,7 @@ def func(message):
         markup.add(button1, button2, button3, button4, button5, button)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Процессор':
+        search("concept_processor", )
         defin = dataCollection.find({'_id': 'processor'})
         buffer = defin.next()
         text = buffer["definition"]
