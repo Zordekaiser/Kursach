@@ -1,4 +1,4 @@
-A16_Bionic<-concept_processor;
+A16_Bionic<-concept_processor_rep;
 =>nrel_main_idtf:
     [A16_Bionic]
     (* <- lang_ru;; <- name_en;;*);

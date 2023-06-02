@@ -1,4 +1,4 @@
-Kirin_9000E<-concept_processor;
+Kirin_9000E<-concept_processor_rep;
 =>nrel_main_idtf:
     [Kirin_9000E]
     (* <- lang_ru;; <- name_en;;*);

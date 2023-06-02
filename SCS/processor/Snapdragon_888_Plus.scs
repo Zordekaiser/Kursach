@@ -1,4 +1,4 @@
-Snapdragon_888_Plus<-concept_processor;
+Snapdragon_888_Plus<-concept_processor_rep;
 =>nrel_main_idtf:
     [Snapdragon_888_Plus]
     (* <- lang_ru;; <- name_en;;*);

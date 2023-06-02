@@ -1,4 +1,4 @@
-Smapdragon_8_Gen_1<-concept_processor;
+Smapdragon_8_Gen_1<-concept_processor_rep;
 =>nrel_main_idtf:
     [Smapdragon_8_Gen_1]
     (* <- lang_ru;; <- name_en;;*);

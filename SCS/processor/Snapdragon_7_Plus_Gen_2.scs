@@ -1,4 +1,4 @@
-Snapdragon_7_Plus_Gen_2<-concept_processor;
+Snapdragon_7_Plus_Gen_2<-concept_processor_rep;
 =>nrel_main_idtf:
     [Snapdragon_7_Plus_Gen_2]
     (* <- lang_ru;; <- name_en;;*);

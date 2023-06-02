@@ -1,4 +1,4 @@
-Exynos_990<-concept_processor;
+Exynos_990<-concept_processor_rep;
 =>nrel_main_idtf:
     [Exynos_990]
     (* <- lang_ru;; <- name_en;;*);

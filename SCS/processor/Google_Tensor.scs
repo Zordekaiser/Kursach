@@ -1,4 +1,4 @@
-Google_Tensor<-concept_processor;
+Google_Tensor<-concept_processor_rep;
 =>nrel_main_idtf:
     [Google_Tensor]
     (* <- lang_ru;; <- name_en;;*);

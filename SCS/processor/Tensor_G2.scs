@@ -1,4 +1,4 @@
-Tensor_G2<-concept_processor;
+Tensor_G2<-concept_processor_rep;
 =>nrel_main_idtf:
     [Tensor_G2]
     (* <- lang_ru;; <- name_en;;*);

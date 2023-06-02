@@ -1,4 +1,4 @@
-Dimensity_8200<-concept_processor;
+Dimensity_8200<-concept_processor_rep;
 =>nrel_main_idtf:
     [Dimensity_8200]
     (* <- lang_ru;; <- name_en;;*);
