@@ -8,9 +8,9 @@ from operator import itemgetter
 url = "ws://localhost:8090/ws_json"
 connect(url)
 
-def get_smartphones_idtf(name: str): # Раздача названий телефонов
+def get_smartphones_idtf(): # Раздача названий телефонов
 
-    concept_addr = ScKeynodes['name']
+    concept_addr = ScKeynodes['concept_smartphone']
 
     my_template = ScTemplate()
     my_template.triple(concept_addr, sc_types.EDGE_ACCESS_VAR_POS_PERM, sc_types.NODE_VAR >> 'quest_node')
