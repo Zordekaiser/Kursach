@@ -1,0 +1,9 @@
+clean_master<-concept_application;
+=>nrel_main_idtf:
+    [clean_master]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_application_app_that_improves_your_device's_performance_by_cleaning_junk_files,_optimizing_device_memory,_providing_complete_protection_against_viruses_and_managing_the_apps_you_installed](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_application_app_that_improves_your_device's_performance_by_cleaning_junk_files,_optimizing_device_memory,_providing_complete_protection_against_viruses_and_managing_the_apps_you_installed](*<-lang_en;;*);;
+*);;

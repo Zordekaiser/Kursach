@@ -1,0 +1,9 @@
+Amazon<-concept_application;
+=>nrel_main_idtf:
+    [Amazon]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [a_vast_Internet-based_enterprise_that_sells_books,_music,_movies,_housewares,_electronics,_toys,_and_many_other_goods,_either_directly_or_as_the_middleman_between_other_retailers_and_millions_of_customers.](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [a_vast_Internet-based_enterprise_that_sells_books,_music,_movies,_housewares,_electronics,_toys,_and_many_other_goods,_either_directly_or_as_the_middleman_between_other_retailers_and_millions_of_customers.](*<-lang_en;;*);;
+*);;

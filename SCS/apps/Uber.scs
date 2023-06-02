@@ -1,0 +1,9 @@
+Uber<-concept_application;
+=>nrel_main_idtf:
+    [Uber]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_application_that_allows_passengers_to_hail_a_ride_and_drivers_to_charge_fares_and_get_paid](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_application_that_allows_passengers_to_hail_a_ride_and_drivers_to_charge_fares_and_get_paid](*<-lang_en;;*);;
+*);;

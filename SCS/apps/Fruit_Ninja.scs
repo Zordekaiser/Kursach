@@ -1,0 +1,9 @@
+Fruit_Ninja<-concept_application;
+=>nrel_main_idtf:
+    [Fruit_Ninja]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [a_video_game,_where_the_player_must_slice_fruit_that_is_thrown_into_the_air_by_swiping_the_device's_touch_screen_with_their_finger_and_must_not_slice_bombs](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [a_video_game,_where_the_player_must_slice_fruit_that_is_thrown_into_the_air_by_swiping_the_device's_touch_screen_with_their_finger_and_must_not_slice_bombs](*<-lang_en;;*);;
+*);;

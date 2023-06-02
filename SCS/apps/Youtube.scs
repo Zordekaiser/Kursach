@@ -1,0 +1,9 @@
+Youtube<-concept_application;
+=>nrel_main_idtf:
+    [Youtube]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [is_a_web_app_designed_for_sharing_video](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [is_a_web_app_designed_for_sharing_video](*<-lang_en;;*);;
+*);;

@@ -1,0 +1,9 @@
+Remote_POS<-concept_application;
+=>nrel_main_idtf:
+    [Remote_POS]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_app_that_enables_businesses_to_accept_orders,_process_payments,_track_orders,_and_display_products_on_a_unified_portal](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_app_that_enables_businesses_to_accept_orders,_process_payments,_track_orders,_and_display_products_on_a_unified_portal](*<-lang_en;;*);;
+*);;

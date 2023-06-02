@@ -1,0 +1,9 @@
+Pinterest<-concept_application;
+=>nrel_main_idtf:
+    [Pinterest]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [a_visual_social_media_platform_where_users_can_make_and_share_pins,_create_boards,_and_shop](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [a_visual_social_media_platform_where_users_can_make_and_share_pins,_create_boards,_and_shop](*<-lang_en;;*);;
+*);;

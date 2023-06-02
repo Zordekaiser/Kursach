@@ -1,0 +1,9 @@
+Candy_Crush_Saga<-concept_application;
+=>nrel_main_idtf:
+    [Candy_Crush_Saga]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [a_free-to_play_tile_matching_video_game_where_players_complete_levels_by_swapping_colored_pieces_of_candy_on_a_game_board_to_make_a_match_of_three_or_more_of_the_same_color,_eliminating_those_candies_from_the_board_and_replacing_the_with_new_ones,_which_could_potentially_create_further_matches](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [a_free-to_play_tile_matching_video_game_where_players_complete_levels_by_swapping_colored_pieces_of_candy_on_a_game_board_to_make_a_match_of_three_or_more_of_the_same_color,_eliminating_those_candies_from_the_board_and_replacing_the_with_new_ones,_which_could_potentially_create_further_matches](*<-lang_en;;*);;
+*);;

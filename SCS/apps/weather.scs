@@ -1,0 +1,9 @@
+weather<-concept_application;
+=>nrel_main_idtf:
+    [weather]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_application_program_where_user_can__check_the_current_weather,_see_the_hourly_forecast_and_view_the_10-day_forecast](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_application_program_where_user_can__check_the_current_weather,_see_the_hourly_forecast_and_view_the_10-day_forecast](*<-lang_en;;*);;
+*);;

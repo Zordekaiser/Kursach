@@ -1,0 +1,9 @@
+Sworkit<-concept_application;
+=>nrel_main_idtf:
+    [Sworkit]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [a_hybrid_app_that_provides_personalized_fitness_programs_for_building_strength,_losing_weight,_increasing_flexibility,_and_conquering_pain](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [a_hybrid_app_that_provides_personalized_fitness_programs_for_building_strength,_losing_weight,_increasing_flexibility,_and_conquering_pain](*<-lang_en;;*);;
+*);;

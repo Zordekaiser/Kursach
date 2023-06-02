@@ -1,0 +1,9 @@
+tranlslate<-concept_application;
+=>nrel_main_idtf:
+    [tranlslate]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_app_that_translates_text,_voice,_and_conversations_between_any_of_the_supported_languages](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_app_that_translates_text,_voice,_and_conversations_between_any_of_the_supported_languages](*<-lang_en;;*);;
+*);;
