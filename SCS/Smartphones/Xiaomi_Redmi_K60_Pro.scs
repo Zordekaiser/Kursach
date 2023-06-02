@@ -28,12 +28,12 @@ Xiaomi_Redmi_K60_Pro<-concept_smartphone;
    =>nrel_main_idtf: [512](*<-lang_en;;*);;
 *);
 =>nrel_main_camera:...(*
-   <- concept_camera;;
+   <- concept_main_camera;;
    =>nrel_main_idtf: [54](*<-lang_ru;;*);;
    =>nrel_main_idtf: [54](*<-lang_en;;*);;
 *);
 =>nrel_front_camera:...(*
-   <- concept_camera;;
+   <- concept_front_camera;;
    =>nrel_main_idtf: [16](*<-lang_ru;;*);;
    =>nrel_main_idtf: [16](*<-lang_en;;*);;
 *);
