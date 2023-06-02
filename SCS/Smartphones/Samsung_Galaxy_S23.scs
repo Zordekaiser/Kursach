@@ -28,12 +28,12 @@ Samsung_Galaxy_S23<-concept_smartphone;
    =>nrel_main_idtf: [512](*<-lang_en;;*);;
 *);
 =>nrel_main_camera:...(*
-   <- concept_main_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [50](*<-lang_ru;;*);;
    =>nrel_main_idtf: [50](*<-lang_en;;*);;
 *);
 =>nrel_front_camera:...(*
-   <- concept_front_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [12](*<-lang_ru;;*);;
    =>nrel_main_idtf: [12](*<-lang_en;;*);;
 *);

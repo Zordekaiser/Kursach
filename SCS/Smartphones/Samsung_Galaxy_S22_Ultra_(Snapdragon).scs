@@ -28,12 +28,12 @@ Samsung_Galaxy_S22_Ultra_(Snapdragon)<-concept_smartphone;
    =>nrel_main_idtf: [1024](*<-lang_en;;*);;
 *);
 =>nrel_main_camera:...(*
-   <- concept_main_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [108](*<-lang_ru;;*);;
    =>nrel_main_idtf: [108](*<-lang_en;;*);;
 *);
 =>nrel_front_camera:...(*
-   <- concept_front_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [40](*<-lang_ru;;*);;
    =>nrel_main_idtf: [40](*<-lang_en;;*);;
 *);

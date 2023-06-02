@@ -28,12 +28,12 @@ ZTE_nubia_Red_Magic_7<-concept_smartphone;
    =>nrel_main_idtf: [512](*<-lang_en;;*);;
 *);
 =>nrel_main_camera:...(*
-   <- concept_main_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [64](*<-lang_ru;;*);;
    =>nrel_main_idtf: [64](*<-lang_en;;*);;
 *);
 =>nrel_front_camera:...(*
-   <- concept_front_camera;;
+   <- concept_camera;;
    =>nrel_main_idtf: [8](*<-lang_ru;;*);;
    =>nrel_main_idtf: [8](*<-lang_en;;*);;
 *);
