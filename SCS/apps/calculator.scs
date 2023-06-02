@@ -1,0 +1,9 @@
+calculator<-concept_application;
+=>nrel_main_idtf:
+    [calculator]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_app_that_is_used_to_perform_basic_arithmetics_or_exponential,_logarithmic_and_trigonometric_functions_with_the_standard_or_scientific_calculator](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_app_that_is_used_to_perform_basic_arithmetics_or_exponential,_logarithmic_and_trigonometric_functions_with_the_standard_or_scientific_calculator](*<-lang_en;;*);;
+*);

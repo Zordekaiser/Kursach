@@ -1,0 +1,24 @@
+Snapdragon_870<-concept_processor;
+=>nrel_main_idtf:
+    [Snapdragon_870]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_number_of_cores:...(*
+   <- concept_number_of_cores;;
+       =>nrel_main_idtf: [8](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [8](*<-lang_en;;*);;
+*);
+=>nrel_frequency:...(*
+   <- concept_frequency;;
+   =>nrel_main_idtf: [3200Hz](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [3200Hz](*<-lang_en;;*);;
+*);
+=>nrel_graphics:...(*
+   <- concept_graphics;;
+   =>nrel_main_idtf: [Adreno_650](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Adreno_650](*<-lang_en;;*);;
+*);
+=>nrel_manufacturer:...(*
+   <- concept_manufacturer;;
+   =>nrel_main_idtf: [Qualcomm](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Qualcomm](*<-lang_en;;*);;
+*);;

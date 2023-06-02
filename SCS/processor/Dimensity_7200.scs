@@ -1,0 +1,24 @@
+Dimensity_7200<-concept_processor;
+=>nrel_main_idtf:
+    [Dimensity_7200]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_number_of_cores:...(*
+   <- concept_number_of_cores;;
+       =>nrel_main_idtf: [8](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [8](*<-lang_en;;*);;
+*);
+=>nrel_frequency:...(*
+   <- concept_frequency;;
+   =>nrel_main_idtf: [2800Hz](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [2800Hz](*<-lang_en;;*);;
+*);
+=>nrel_graphics:...(*
+   <- concept_graphics;;
+   =>nrel_main_idtf: [Mali-G610_MC4](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Mali-G610_MC4](*<-lang_en;;*);;
+*);
+=>nrel_manufacturer:...(*
+   <- concept_manufacturer;;
+   =>nrel_main_idtf: [MediaTek](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [MediaTek](*<-lang_en;;*);;
+*);;

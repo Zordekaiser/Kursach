@@ -1,0 +1,9 @@
+clock<-concept_application;
+=>nrel_main_idtf:
+    [clock]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_definition:...(*
+   <- concept_definition;;
+       =>nrel_main_idtf: [an_app_that_is_used_to_measure_and_indicate_time,_set_alarm,_use_stopwatch_and_timer](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [an_app_that_is_used_to_measure_and_indicate_time,_set_alarm,_use_stopwatch_and_timer](*<-lang_en;;*);;
+*);

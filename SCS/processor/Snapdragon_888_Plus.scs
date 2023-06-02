@@ -1,0 +1,24 @@
+Snapdragon_888_Plus<-concept_processor;
+=>nrel_main_idtf:
+    [Snapdragon_888_Plus]
+    (* <- lang_ru;; <- name_en;;*);
+=>nrel_number_of_cores:...(*
+   <- concept_number_of_cores;;
+       =>nrel_main_idtf: [8](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [8](*<-lang_en;;*);;
+*);
+=>nrel_frequency:...(*
+   <- concept_frequency;;
+   =>nrel_main_idtf: [2995Hz](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [2995Hz](*<-lang_en;;*);;
+*);
+=>nrel_graphics:...(*
+   <- concept_graphics;;
+   =>nrel_main_idtf: [Adreno_660](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Adreno_660](*<-lang_en;;*);;
+*);
+=>nrel_manufacturer:...(*
+   <- concept_manufacturer;;
+   =>nrel_main_idtf: [Qualcomm](*<-lang_ru;;*);;
+   =>nrel_main_idtf: [Qualcomm](*<-lang_en;;*);;
+*);;
