@@ -3,13 +3,14 @@ from sc_client.constants import sc_types
 from sc_client.models import ScTemplate, ScTemplateResult, ScAddr
 from sc_kpm.utils import get_system_idtf, get_link_content_data, get_element_by_norole_relation
 from sc_kpm import ScKeynodes
+from operator import itemgetter
 
 url = "ws://localhost:8090/ws_json"
 connect(url)
 
-def get_smartphones_idtf(): # Раздача названий телефонов
+def get_smartphones_idtf(name: str): # Раздача названий телефонов
 
-    concept_addr = ScKeynodes['concept_smartphone']
+    concept_addr = ScKeynodes['name']
 
     my_template = ScTemplate()
     my_template.triple(concept_addr, sc_types.EDGE_ACCESS_VAR_POS_PERM, sc_types.NODE_VAR >> 'quest_node')
@@ -34,6 +35,25 @@ def get_params_smartphone(_smartphone_name: str):  # Лутает все пар�
     result_dict.setdefault('name', _smartphone_name)
     return result_dict
 
+def get_params_processor(_smartphone_name: str):  # Лутает все параметры и собирает в словарь + name
+    list_params = ['number_of_cores', 'frequency', 'graphics', 'manufacturer']
+    result_dict = {}
+
+    for param in list_params:
+        result_dict[param] = get_param(_smartphone_name, 'nrel_' + param)
+
+    result_dict.setdefault('name', _smartphone_name)
+    return result_dict
+
+def get_params_app(_smartphone_name: str):  # Лутает все параметры и собирает в словарь + name
+    list_params = ['name', 'definition']
+    result_dict = {}
+
+    for param in list_params:
+        result_dict[param] = get_param(_smartphone_name, 'nrel_' + param)
+
+    result_dict.setdefault('name', _smartphone_name)
+    return result_dict
 
 def get_param(target: str, param: str): # Возвращает значение одной характеристики/комплектующей
 

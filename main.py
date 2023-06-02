@@ -5,17 +5,30 @@ import pymongo
 from sc_client.client import connect, disconnect, create_elements
 from sc_kpm.utils import get_element_by_norole_relation, get_link_content_data
 from sc_kpm import ScKeynodes
-from Foo import get_smartphones_idtf, get_params_smartphone
+from Foo import get_smartphones_idtf, get_params_smartphone, get_params_app
 from operator import itemgetter
 
 url = "ws://localhost:8090/ws_json"
 connect(url)
 
-def get_smartphones():
+def get_processor():
     buffer = []
-    idtf = get_smartphones_idtf()
+    idtf = get_smartphones_idtf('concept_processor')
     for i in idtf:
         buffer.append(get_params_smartphone(i))
+    return buffer
+def get_smartphones():
+    buffer = []
+    idtf = get_smartphones_idtf('concept_smartphone')
+    for i in idtf:
+        buffer.append(get_params_smartphone(i))
+    return buffer
+
+def get_apps():
+    buffer = []
+    idtf = get_smartphones_idtf('concept_application')
+    for i in idtf:
+        buffer.append(get_params_app(i))
     return buffer
 
 def extract_arg(arg):
@@ -84,17 +97,29 @@ class Smarphones:
     buffer_smartphones = []
     buffer_smartphones_counter = 0
 
+class Apps:
+    list_params = ['name', 'definition']
+    buffer_apps = []
+    buffer_apps_counter = 0
 
+class Processors:
+    list_params = ['number_of_cores', 'frequency', 'graphics', 'manufacturer']
+    buffer_processors = []
+    buffer_processors_counter = 0
 
-buf = Smarphones
-
+buf_smartphone = Smarphones
+buf_app = Apps
+buf_processor = Processors
 
 @bot.message_handler(content_types=['text'])
 def func(message):
+    global buf_processor
+    global buf_app
+    global buf_smartphone
     if message.text == 'Вернуться в главное меню':
-        global buf
-        buf.buffer_smartphones =[]
-        buf.buffer_smartphones_counter = 0
+
+        buf_smartphone.buffer_smartphones =[]
+        buf_smartphone.buffer_smartphones_counter = 0
         mess = "<i>Выберите задачу:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Помоги подобрать телефон')
@@ -113,10 +138,10 @@ def func(message):
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Хочу делать красивые фотографии':
         mess = ""
-        global buf
-        buf.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('main_camera', 'front_camera'))
-        for i in buf.list_params:
-            mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+
+        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('main_camera', 'front_camera'))
+        for i in buf_smartphone.list_params:
+            mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
         mess += "<i>Выберите дейтвие:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Следующий телефон')
@@ -126,10 +151,10 @@ def func(message):
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Хочу смотреть фильмы и сериалы':
         mess = ""
-        global buf
-        buf.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('display_resolution', 'display_size'))
-        for i in buf.list_params:
-            mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+
+        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('display_resolution', 'display_size'))
+        for i in buf_smartphone.list_params:
+            mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
         mess += "<i>Выберите дейтвие:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Следующий телефон')
@@ -139,10 +164,10 @@ def func(message):
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Хочу играть в крутые игры':
         mess = ""
-        global buf
-        buf.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('RAM', 'battery'))
-        for i in buf.list_params:
-            mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+
+        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('RAM', 'battery'))
+        for i in buf_smartphone.list_params:
+            mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
         mess += "<i>Выберите дейтвие:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Следующий телефон')
@@ -152,10 +177,10 @@ def func(message):
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Хочу просто звонить и иногда выходить в социальные сети':
         mess = ""
-        global buf
-        buf.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('battery', 'HDD'))
-        for i in buf.list_params:
-            mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+
+        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('battery'))
+        for i in buf_smartphone.list_params:
+            mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
         mess += "<i>Выберите дейтвие:</i>"
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Следующий телефон')
@@ -164,12 +189,12 @@ def func(message):
         markup.add(button1, button2, button)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Следующий телефон':
-        global buf
-        if buf.buffer_smartphones_counter < 15:
-            buf.buffer_smartphones_counter += 1
+
+        if buf_smartphone.buffer_smartphones_counter < 15:
+            buf_smartphone.buffer_smartphones_counter += 1
             mess = ""
-            for i in buf.list_params:
-                mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+            for i in buf_smartphone.list_params:
+                mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
             mess += "<i>Выберите дейтвие:</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton('Следующий телефон')
@@ -185,12 +210,12 @@ def func(message):
             markup.add(button1, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Предыдущий телефон':
-        global buf
-        if buf.buffer_smartphones_counter > 0:
-            buf.buffer_smartphones_counter -= 1
+
+        if buf_smartphone.buffer_smartphones_counter > 0:
+            buf_smartphone.buffer_smartphones_counter -= 1
             mess = ""
-            for i in buf.list_params:
-                mess += f"<i>{i}: {buf.buffer_smartphones[buf.buffer_smartphones_counter][i]}\n</i>"
+            for i in buf_smartphone.list_params:
+                mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
             mess += "<i>Выберите дейтвие:</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton('Следующий телефон')
@@ -213,8 +238,9 @@ def func(message):
         button3 = types.KeyboardButton('Матрицы и их разновидности')
         button4 = types.KeyboardButton('Сенсоры и их разновидности')
         button5 = types.KeyboardButton('Операционные системы и их разновидности')
+        button6 = types.KeyboardButton('Приложения')
         button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button3, button4, button5, button)
+        markup.add(button1, button2, button3, button4, button5, button6, button)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Процессор':
         defin = dataCollection.find({'_id': 'processor'})
@@ -222,10 +248,25 @@ def func(message):
         text = buffer["definition"]
         mess = f'<i>{underscoreToSpace(text)}</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2)
+        button1 = types.KeyboardButton('Какие процессоры сущесвтуют?')
+        button2 = types.KeyboardButton('Вернуться к комплектующим')
+        button3 = types.KeyboardButton('Вернуться в главное меню')
+        markup.add(button1, button2, button3)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+    elif message.text == 'Какие процессоры сущесвтуют?':
+        mess = ""
+
+        buf_processor.buffer_processors = get_processor()
+        for i in buf_processor.list_params:
+            mess += f"<i>{i}: {buf_processor.buffer_processors[buf_processor.buffer_processors_counter][i]}\n</i>"
+        mess += "<i>Выберите дейтвие:</i>"
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton('Следующий процессор')
+        button2 = types.KeyboardButton('Предыдущий процессор')
+        button = types.KeyboardButton('Вернуться в главное меню')
+        markup.add(button1, button2, button)
+        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+
     elif message.text == 'Камера':
         defin = dataCollection.find({'_id': 'camera'})
         buffer = defin.next()
@@ -340,6 +381,62 @@ def func(message):
             else:
                 text += '.'
         bot.send_message(message.chat.id, mess+text, parse_mode='html', reply_markup=markup)
+    elif message.text == 'Приложения':
+        mess = ""
+
+        buf_app.buffer_apps = get_apps()
+        for i in buf_app.list_params:
+            mess += f"<i>{i}: {buf_app.buffer_apps[buf_app.buffer_apps_counter][i]}\n</i>"
+        mess += "<i>Выберите дейтвие:</i>"
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        button1 = types.KeyboardButton('Следующее приложение')
+        button2 = types.KeyboardButton('Предыдущее приложение')
+        button = types.KeyboardButton('Вернуться в главное меню')
+        markup.add(button1, button2, button)
+        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+    elif message.text == 'Следующее приложение':
+
+        if buf_app.buffer_apps_counter < len(buf_app.buffer_apps):
+            buf_smartphone.buffer_smartphones_counter += 1
+            mess = ""
+            for i in buf_app.list_params:
+                mess += f"<i>{i}: {buf_app.buffer_apps[buf_app.buffer_apps_counter][i]}\n</i>"
+            mess += "<i>Выберите дейтвие:</i>"
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            button1 = types.KeyboardButton('Следующий телефон')
+            button2 = types.KeyboardButton('Предыдущий телефон')
+            button = types.KeyboardButton('Вернуться в главное меню')
+            markup.add(button1, button2, button)
+            bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+        else:
+            mess = "<i>Были представлены все приложения</i>"
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            button1 = types.KeyboardButton('Следующий телефон')
+            button = types.KeyboardButton('Вернуться в главное меню')
+            markup.add(button1, button)
+            bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+
+    elif message.text == 'Предыдущее приложение':
+
+        if buf_app.buffer_apps_counter > 0:
+            buf_smartphone.buffer_smartphones_counter -= 1
+            mess = ""
+            for i in buf_app.list_params:
+                mess += f"<i>{i}: {buf_app.buffer_apps[buf_app.buffer_apps_counter][i]}\n</i>"
+            mess += "<i>Выберите дейтвие:</i>"
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            button1 = types.KeyboardButton('Следующее приложние')
+            button2 = types.KeyboardButton('Предыдущее приложение')
+            button = types.KeyboardButton('Вернуться в главное меню')
+            markup.add(button1, button2, button)
+            bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+        else:
+            mess = "<i>Вы вернулись в начало списка</i>"
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            button1 = types.KeyboardButton('Следующее приложние')
+            button = types.KeyboardButton('Вернуться в главное меню')
+            markup.add(button1, button)
+            bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
 
 bot.polling(none_stop=True)
 
