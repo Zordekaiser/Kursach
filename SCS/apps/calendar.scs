@@ -6,4 +6,4 @@ calendar<-concept_application;
    <- concept_definition;;
        =>nrel_main_idtf: [an_app_that_is_used_to_check,_create_and_edit_events,_appointments,_and_meetings](*<-lang_ru;;*);;
    =>nrel_main_idtf: [an_app_that_is_used_to_check,_create_and_edit_events,_appointments,_and_meetings](*<-lang_en;;*);;
-*);
+*);;

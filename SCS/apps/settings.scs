@@ -6,4 +6,4 @@ settings<-concept_application;
    <- concept_definition;;
        =>nrel_main_idtf: [an_app_that_lets_the_user_customize_his_device_to_fit_his_preferences](*<-lang_ru;;*);;
    =>nrel_main_idtf: [an_app_that_lets_the_user_customize_his_device_to_fit_his_preferences](*<-lang_en;;*);;
-*);
+*);;

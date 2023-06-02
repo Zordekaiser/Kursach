@@ -6,4 +6,4 @@ messages<-concept_application;
    <- concept_definition;;
        =>nrel_main_idtf: [a_handy,_built-in_app_that_is_used_to_send_and_receive_text_messages,_photos,_voice_messages,_and_video](*<-lang_ru;;*);;
    =>nrel_main_idtf: [a_handy,_built-in_app_that_is_used_to_send_and_receive_text_messages,_photos,_voice_messages,_and_video](*<-lang_en;;*);;
-*);
+*);;
