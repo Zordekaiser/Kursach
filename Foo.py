@@ -8,6 +8,18 @@ from operator import itemgetter
 url = "ws://localhost:8090/ws_json"
 connect(url)
 
+
+def get_definition(name):
+    addr = ScKeynodes[name]
+    my_template = ScTemplate()
+    my_template.triple(addr, sc_types.EDGE_D_COMMON_VAR, sc_types.LINK_VAR >> 'link')
+    search_res = template_search(my_template)
+    addr_res = search_res[0].get('link')
+    data_res = get_link_content_data(addr_res)
+
+    return data_res
+
+
 def get_smartphones_idtf(): # Раздача названий телефонов
 
     concept_addr = ScKeynodes['concept_smartphone']
@@ -75,5 +87,4 @@ def get_main_indtf(target: ScAddr):
         return get_link_content_data(search_results[0].get('link'))
 
 
-print(get_params_smartphone('Motorola_Edge_30_Ultra'))
 disconnect()
