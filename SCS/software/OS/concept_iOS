@@ -1,0 +1,26 @@
+concept_iOS
+=> nrel_main_idtf:
+	[iOS] (* <- lang_ru;; *);
+	[iOS] (* <- lang_en;; *);;
+
+definition -> definition_of_iOS (*
+	-> rrel_key_sc_element: concept_iOS;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [iOS - операционная система для мобильных устройств, разработанная компанией Apple. Она используется в iPhone, iPad и iPod touch. iOS основана на ядре Darwin и является закрытой операционной системой. Она предоставляет удобный интерфейс, высокую производительность и широкие возможности для разработки приложений.] (* <- lang_ru;; *);;
+		-> [iOS is an operating system for mobile devices developed by Apple. It is used in iPhone, iPad and iPod touch. iOS is based on the Darwin kernel and is a closed operating system. It provides a user-friendly interface, high performance and ample opportunities for application development.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (iOS)] (* <- lang_ru;; *);
+		[Def. (iOS)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_OS;
+		concept_software;
+	};;
+*);;
+
+sc_node_class ->
+	concept_OS;
+	concept_software;;

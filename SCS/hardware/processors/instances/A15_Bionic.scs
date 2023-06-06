@@ -1,0 +1,19 @@
+A15_Bionic <- concept_processor;
+=>nrel_main_idtf:
+    [A15_Bionic](* <- lang_ru;;*);
+    [A15_Bionic](* <- lang_en;;*);;
+A15_Bionic<=nrel_count_of_cores: 6(* <- number;;*);;
+A15_Bionic<=nrel_frenquency: 3230Hz(*
+    <- sc_node_class;;
+    <- exact_value;;
+    <- concept_frenquency;;
+*);;
+A15_Bionic<=nrel_processor_manufacturer: Apple(*
+    <- concept_manufacturer;;
+*);;
+3230Hz =>  nrel_measurement_in_hertz: 3230(*<-number;;*);;
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

@@ -1,9 +1,0 @@
-LinkedIn<-concept_application;
-=>nrel_main_idtf:
-    [LinkedIn]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [the_world's_largest_professional_network_on_the_internet._You_can_use_LinkedIn_to_find_the_right_job_or_internship,_connect_and_strengthen_professional_relationships,_and_learn_the_skills_you_need_to_succeed_in_your_career](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [the_world's_largest_professional_network_on_the_internet._You_can_use_LinkedIn_to_find_the_right_job_or_internship,_connect_and_strengthen_professional_relationships,_and_learn_the_skills_you_need_to_succeed_in_your_career](*<-lang_en;;*);;
-*);;

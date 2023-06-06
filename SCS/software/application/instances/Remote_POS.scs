@@ -1,0 +1,12 @@
+Remote_POS <- concept_application;
+=>nrel_main_idtf:
+    [Remote_POS](* <- lang_ru;;*);
+    [Remote_POS](* <- lang_en;;*);;
+Remote_POSdefinition -> definition_of_Remote_POS (*
+-> rrel_key_sc_element: Remote_POS;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое позволяет предприятиям принимать заказы, обрабатывать платежи, отслеживать заказы и отображать продукты на едином портале] (* <- lang_ru;; *);;
+    ->[an app that enables businesses to accept orders, process payments, track orders, and display products on a unified portal] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Remote_POS] (* <- lang_ru;; *);
+    [Def. Remote_POS] (* <- lang_en;; *);;
+*);;

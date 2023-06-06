@@ -1,0 +1,26 @@
+concept_processor_manufacturer
+=> nrel_main_idtf:
+	[производитель] (* <- lang_ru;; *);
+	[manufacturer] (* <- lang_en;; *);;
+	
+definition -> definition_of_manufacturer (*
+	-> rrel_key_sc_element: concept_manufacturer;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Производитель - это компания, занимающаяся производством и выпуском различных товаров. Она отвечает за разработку, производство и распространение продукции, а также за ее качество и соответствие требованиям потребителей. ] (* <- lang_ru;; *);;
+		-> [A manufacturer is a company engaged in the production and release of various goods, including mobile devices. It is responsible for the development, production and distribution of products, as well as for their quality and compliance with customer requirements.] (* <- lang_en;; *);;
+	*);;
+
+	=> nrel_main_idtf:
+		[Опр. (производитель)] (* <- lang_ru;; *);
+		[Def. (manufacturer)] (* <- lang_en;; *);;
+*);;
+
+sc_node_class ->
+	concept_manufacturer;;
+	
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

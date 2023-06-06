@@ -1,0 +1,12 @@
+Gmail <- concept_application;
+=>nrel_main_idtf:
+    [Gmail](* <- lang_ru;;*);
+    [Gmail](* <- lang_en;;*);;
+Gmaildefinition -> definition_of_Gmail (*
+-> rrel_key_sc_element: Gmail;;<= nrel_sc_text_translation: ... (*
+     ->[гибридное приложение, с помощью которого ваша электронная почта надежно хранится в облаке] (* <- lang_ru;; *);;
+    ->[a hybrid app your email is stored safely in the cloud with] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Gmail] (* <- lang_ru;; *);
+    [Def. Gmail] (* <- lang_en;; *);;
+*);;

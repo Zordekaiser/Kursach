@@ -1,0 +1,12 @@
+tranlslate <- concept_application;
+=>nrel_main_idtf:
+    [tranlslate](* <- lang_ru;;*);
+    [tranlslate](* <- lang_en;;*);;
+tranlslatedefinition -> definition_of_tranlslate (*
+-> rrel_key_sc_element: tranlslate;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое переводит текст, голос и разговоры между любым из поддерживаемых языков] (* <- lang_ru;; *);;
+    ->[an app that translates text, voice, and conversations between any of the supported languages] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. tranlslate] (* <- lang_ru;; *);
+    [Def. tranlslate] (* <- lang_en;; *);;
+*);;

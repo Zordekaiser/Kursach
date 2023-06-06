@@ -1,0 +1,21 @@
+concept_device
+=> nrel_main_idtf:
+	[мобильное устройство] (* <- lang_ru;; *);
+	[mobile device] (* <- lang_en;; *);;
+
+definition -> definition_of_device (*
+	-> rrel_key_sc_element: concept_device;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Мобильное устройство - это портативное электронное устройство, которое может быть легко переносимым и используется для коммуникации, доступа к интернету, выполнения различных задач и развлечений.] (* <- lang_ru;; *);;
+		-> [A mobile device is a portable electronic device that can be easily carried and is used for communication, Internet access, various tasks and entertainment.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (мобильное устройство)] (* <- lang_ru;; *);
+		[Def. (mobile device)] (* <- lang_en;; *);;
+		
+*);;
+
+sc_node_class ->
+	concept_device;;

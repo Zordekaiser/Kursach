@@ -1,9 +1,0 @@
-Instagram<-concept_application;
-=>nrel_main_idtf:
-    [Instagram]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_free_photo_and_video_sharing_app_available_on_iPhone_and_Android._People_can_upload_photos_or_videos_to_our_service_and_share_them_with_their_followers_or_with_a_select_group_of_friends._They_can_also_view,_comment_and_like_posts_shared_by_their_friends_on_Instagram](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_free_photo_and_video_sharing_app_available_on_iPhone_and_Android._People_can_upload_photos_or_videos_to_our_service_and_share_them_with_their_followers_or_with_a_select_group_of_friends._They_can_also_view,_comment_and_like_posts_shared_by_their_friends_on_Instagram](*<-lang_en;;*);;
-*);;

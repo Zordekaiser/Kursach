@@ -1,0 +1,12 @@
+clock <- concept_application;
+=>nrel_main_idtf:
+    [clock](* <- lang_ru;;*);
+    [clock](* <- lang_en;;*);;
+clockdefinition -> definition_of_clock (*
+-> rrel_key_sc_element: clock;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое используется для измерения и индикации времени, установки будильника, использования секундомера и таймера] (* <- lang_ru;; *);;
+    ->[an app that is used to measure and indicate time, set alarm, use stopwatch and timer] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. clock] (* <- lang_ru;; *);
+    [Def. clock] (* <- lang_en;; *);;
+*);;

@@ -1,0 +1,19 @@
+Snapdragon_870 <- concept_processor;
+=>nrel_main_idtf:
+    [Snapdragon_870](* <- lang_ru;;*);
+    [Snapdragon_870](* <- lang_en;;*);;
+Snapdragon_870<=nrel_count_of_cores: 8(* <- number;;*);;
+Snapdragon_870<=nrel_frenquency: 3200Hz(*
+    <- sc_node_class;;
+    <- exact_value;;
+    <- concept_frenquency;;
+*);;
+Snapdragon_870<=nrel_processor_manufacturer: Qualcomm(*
+    <- concept_manufacturer;;
+*);;
+3200Hz =>  nrel_measurement_in_hertz: 3200(*<-number;;*);;
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

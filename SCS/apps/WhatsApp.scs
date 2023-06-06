@@ -1,9 +1,0 @@
-WhatsApp<-concept_application;
-=>nrel_main_idtf:
-    [WhatsApp]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_free_cross-platform_messaging_service._It_lets_users_of_iPhone_and_Android_smartphones_call_and_exchange_text,_photo,_audio_and_video_messages_with_others_across_the_globe_for_free,_regardless_of_the_recipient's_device](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_free_cross-platform_messaging_service._It_lets_users_of_iPhone_and_Android_smartphones_call_and_exchange_text,_photo,_audio_and_video_messages_with_others_across_the_globe_for_free,_regardless_of_the_recipient's_device](*<-lang_en;;*);;
-*);;

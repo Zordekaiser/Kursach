@@ -1,0 +1,55 @@
+Tecno_Phantom_X2 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Tecno_Phantom_X2](* <- lang_ru;;*);
+    [Tecno_Phantom_X2](* <- lang_en;;*);;
+Tecno_Phantom_X2<=nrel_OS: concept_Android;;
+Tecno_Phantom_X2<=nrel_processor: Dimensity_9000;;
+Tecno_Phantom_X2<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+8Gb => nrel_measurement_in_Gb: 8(*<-number;;*);;Tecno_Phantom_X2<= nrel_RAM: 8Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+256Gb => nrel_measurement_in_Gb: 256(*<-number;;*);;Tecno_Phantom_X2<= nrel_HDD: 256Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+64Mp => nrel_measurement_in_megapixels: 64(*<-number;;*);;Tecno_Phantom_X2<= nrel_main_camera: 64Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+32Mp => nrel_measurement_in_megapixels: 32(*<-number;;*);;Tecno_Phantom_X2<= nrel_front_camera: 32Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.8d => nrel_measurement_in_inches: 6.8(*<-number;;*);;Tecno_Phantom_X2<= nrel_display_size: 6.8d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Tecno_Phantom_X2<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1080x2400](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[MediaTek_Dimensity_9000](* <- lang_en;;*);;
+*);;5160Ah => nrel_measurement_in_Ah: 5160(*<-number;;*);;Tecno_Phantom_X2<= nrel_battery: 5160Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

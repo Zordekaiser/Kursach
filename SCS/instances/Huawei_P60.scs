@@ -1,0 +1,55 @@
+Huawei_P60 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Huawei_P60](* <- lang_ru;;*);
+    [Huawei_P60](* <- lang_en;;*);;
+Huawei_P60<=nrel_OS: concept_Android;;
+Huawei_P60<=nrel_processor: Snapdragon_8_Gen_1;;
+Huawei_P60<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[OLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[OLED](* <- lang_en;;*);;
+*);;
+8Gb => nrel_measurement_in_Gb: 8(*<-number;;*);;Huawei_P60<= nrel_RAM: 8Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;Huawei_P60<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+48Mp => nrel_measurement_in_megapixels: 48(*<-number;;*);;Huawei_P60<= nrel_main_camera: 48Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+13Mp => nrel_measurement_in_megapixels: 13(*<-number;;*);;Huawei_P60<= nrel_front_camera: 13Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.67d => nrel_measurement_in_inches: 6.67(*<-number;;*);;Huawei_P60<= nrel_display_size: 6.67d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Huawei_P60<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1220x2700](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_1](* <- lang_en;;*);;
+*);;4815Ah => nrel_measurement_in_Ah: 4815(*<-number;;*);;Huawei_P60<= nrel_battery: 4815Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

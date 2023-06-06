@@ -1,0 +1,55 @@
+Xiaomi_13 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Xiaomi_13](* <- lang_ru;;*);
+    [Xiaomi_13](* <- lang_en;;*);;
+Xiaomi_13<=nrel_OS: concept_Android;;
+Xiaomi_13<=nrel_processor: Snapdragon_8_Gen_2;;
+Xiaomi_13<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+12Gb => nrel_measurement_in_Gb: 12(*<-number;;*);;Xiaomi_13<= nrel_RAM: 12Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;Xiaomi_13<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+50Mp => nrel_measurement_in_megapixels: 50(*<-number;;*);;Xiaomi_13<= nrel_main_camera: 50Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+32Mp => nrel_measurement_in_megapixels: 32(*<-number;;*);;Xiaomi_13<= nrel_front_camera: 32Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.36d => nrel_measurement_in_inches: 6.36(*<-number;;*);;Xiaomi_13<= nrel_display_size: 6.36d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Xiaomi_13<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1080x2400](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_2](* <- lang_en;;*);;
+*);;4500Ah => nrel_measurement_in_Ah: 4500(*<-number;;*);;Xiaomi_13<= nrel_battery: 4500Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

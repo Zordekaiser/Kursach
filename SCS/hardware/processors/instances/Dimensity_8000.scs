@@ -1,0 +1,19 @@
+Dimensity_8000 <- concept_processor;
+=>nrel_main_idtf:
+    [Dimensity_8000](* <- lang_ru;;*);
+    [Dimensity_8000](* <- lang_en;;*);;
+Dimensity_8000<=nrel_count_of_cores: 8(* <- number;;*);;
+Dimensity_8000<=nrel_frenquency: 2750Hz(*
+    <- sc_node_class;;
+    <- exact_value;;
+    <- concept_frenquency;;
+*);;
+Dimensity_8000<=nrel_processor_manufacturer: MediaTek(*
+    <- concept_manufacturer;;
+*);;
+2750Hz =>  nrel_measurement_in_hertz: 2750(*<-number;;*);;
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

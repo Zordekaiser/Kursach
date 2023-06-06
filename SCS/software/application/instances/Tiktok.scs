@@ -1,0 +1,12 @@
+Tiktok <- concept_application;
+=>nrel_main_idtf:
+    [Tiktok](* <- lang_ru;;*);
+    [Tiktok](* <- lang_en;;*);;
+Tiktokdefinition -> definition_of_Tiktok (*
+-> rrel_key_sc_element: Tiktok;;<= nrel_sc_text_translation: ... (*
+     ->[платформа социальных сетей для создания, обмена и поиска коротких видеороликов] (* <- lang_ru;; *);;
+    ->[a social media platform for creating, sharing and discovering short videos] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Tiktok] (* <- lang_ru;; *);
+    [Def. Tiktok] (* <- lang_en;; *);;
+*);;

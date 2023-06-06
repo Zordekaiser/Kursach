@@ -1,0 +1,19 @@
+Tensor_G2 <- concept_processor;
+=>nrel_main_idtf:
+    [Tensor_G2](* <- lang_ru;;*);
+    [Tensor_G2](* <- lang_en;;*);;
+Tensor_G2<=nrel_count_of_cores: 8(* <- number;;*);;
+Tensor_G2<=nrel_frenquency: 2850Hz(*
+    <- sc_node_class;;
+    <- exact_value;;
+    <- concept_frenquency;;
+*);;
+Tensor_G2<=nrel_processor_manufacturer: Google(*
+    <- concept_manufacturer;;
+*);;
+2850Hz =>  nrel_measurement_in_hertz: 2850(*<-number;;*);;
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

@@ -1,0 +1,12 @@
+calendar <- concept_application;
+=>nrel_main_idtf:
+    [calendar](* <- lang_ru;;*);
+    [calendar](* <- lang_en;;*);;
+calendardefinition -> definition_of_calendar (*
+-> rrel_key_sc_element: calendar;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое используется для проверки, создания и редактирования событий, встреч и собраний] (* <- lang_ru;; *);;
+    ->[an app that is used to check, create and edit events, appointments, and meetings] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. calendar] (* <- lang_ru;; *);
+    [Def. calendar] (* <- lang_en;; *);;
+*);;

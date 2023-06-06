@@ -1,0 +1,12 @@
+calculator <- concept_application;
+=>nrel_main_idtf:
+    [calculator](* <- lang_ru;;*);
+    [calculator](* <- lang_en;;*);;
+calculatordefinition -> definition_of_calculator (*
+-> rrel_key_sc_element: calculator;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое используется для выполнения основных арифметических или экспоненциальных, логарифмических и тригонометрических функций с помощью стандартного или научного калькулятора] (* <- lang_ru;; *);;
+    ->[an app that is used to perform basic arithmetics or exponential, logarithmic and trigonometric functions with the standard or scientific calculator] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. calculator] (* <- lang_ru;; *);
+    [Def. calculator] (* <- lang_en;; *);;
+*);;

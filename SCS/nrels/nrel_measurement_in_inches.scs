@@ -1,0 +1,4 @@
+nrel_measurement_in_inches <- measurement_of_fixed_measure;
+=> nrel_main_idtf:
+	[измерение в дюймах*] (* <- lang_ru;; *);
+	[measurement in inches*] (* <- lang_en;; *);;

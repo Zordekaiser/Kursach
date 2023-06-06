@@ -1,0 +1,55 @@
+Samsung_Galaxy_S23 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Samsung_Galaxy_S23](* <- lang_ru;;*);
+    [Samsung_Galaxy_S23](* <- lang_en;;*);;
+Samsung_Galaxy_S23<=nrel_OS: concept_Android;;
+Samsung_Galaxy_S23<=nrel_processor: Snapdragon_8_Gen_2_Mobile_Platform_for_Galaxy;;
+Samsung_Galaxy_S23<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+8Gb => nrel_measurement_in_Gb: 8(*<-number;;*);;Samsung_Galaxy_S23<= nrel_RAM: 8Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;Samsung_Galaxy_S23<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+50Mp => nrel_measurement_in_megapixels: 50(*<-number;;*);;Samsung_Galaxy_S23<= nrel_main_camera: 50Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+12Mp => nrel_measurement_in_megapixels: 12(*<-number;;*);;Samsung_Galaxy_S23<= nrel_front_camera: 12Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.1d => nrel_measurement_in_inches: 6.1(*<-number;;*);;Samsung_Galaxy_S23<= nrel_display_size: 6.1d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Samsung_Galaxy_S23<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1080x2340](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_2_Mobile_Platform_for_Galaxy](* <- lang_en;;*);;
+*);;3900Ah => nrel_measurement_in_Ah: 3900(*<-number;;*);;Samsung_Galaxy_S23<= nrel_battery: 3900Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

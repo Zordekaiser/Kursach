@@ -1,0 +1,43 @@
+concept_smartphone
+=> nrel_main_idtf:
+	[смартфон] (* <- lang_ru;; *);
+	[smartphone] (* <- lang_en;; *);;
+
+definition -> definition_of_smartphone (*
+	-> rrel_key_sc_element: concept_smartphone;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Смартфон - это мобильный телефон, оснащенный мощным процессором, большим дисплеем с высоким разрешением, операционной системой и возможностью установки приложений. Он позволяет пользователю не только общаться, но и работать с различными приложениями, играть в игры, смотреть видео, слушать музыку, совершать покупки и многое другое. Смартфон объединяет в себе функции телефона, компьютера и мультимедийного устройства.] (* <- lang_ru;; *);;
+		-> [A smartphone is a mobile phone that is equipped with a powerful processor, a large, high-resolution display, an operating system, and the ability to install applications. It allows the user not only to communicate, but also to work with various applications, play games, watch videos, listen to music, make purchases and much more. A smartphone combines the functions of a telephone, a computer, and a multimedia device.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (смартфон)] (* <- lang_ru;; *);
+		[Def. (smartphone)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_processor;
+		concept_display;
+		concept_OS;
+		concept_application;
+		concept_resolution;
+		concept_video;
+		concept_music;
+		nrel_display_size;
+		nrel_display_resolution
+	};;
+*);;
+
+sc_node_class ->
+	concept_processor;
+	concept_display;
+	concept_OS;
+	concept_application;
+	concept_resolution;
+	concept_video;
+	concept_music;
+	concept_computer;;
+	
+sc_node_norole_relation->
+	nrel_display_size;
+	nrel_display_resolution;;

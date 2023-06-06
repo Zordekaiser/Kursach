@@ -1,0 +1,55 @@
+Honor_Magic_5 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Honor_Magic_5](* <- lang_ru;;*);
+    [Honor_Magic_5](* <- lang_en;;*);;
+Honor_Magic_5<=nrel_OS: concept_Android;;
+Honor_Magic_5<=nrel_processor: Snapdragon_8_Gen_2;;
+Honor_Magic_5<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[OLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[OLED](* <- lang_en;;*);;
+*);;
+16Gb => nrel_measurement_in_Gb: 16(*<-number;;*);;Honor_Magic_5<= nrel_RAM: 16Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;Honor_Magic_5<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+54Mp => nrel_measurement_in_megapixels: 54(*<-number;;*);;Honor_Magic_5<= nrel_main_camera: 54Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+12Mp => nrel_measurement_in_megapixels: 12(*<-number;;*);;Honor_Magic_5<= nrel_front_camera: 12Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.73d => nrel_measurement_in_inches: 6.73(*<-number;;*);;Honor_Magic_5<= nrel_display_size: 6.73d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Honor_Magic_5<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1224x2688](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_2](* <- lang_en;;*);;
+*);;5100Ah => nrel_measurement_in_Ah: 5100(*<-number;;*);;Honor_Magic_5<= nrel_battery: 5100Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

@@ -1,0 +1,12 @@
+mail <- concept_application;
+=>nrel_main_idtf:
+    [mail](* <- lang_ru;;*);
+    [mail](* <- lang_en;;*);;
+maildefinition -> definition_of_mail (*
+-> rrel_key_sc_element: mail;;<= nrel_sc_text_translation: ... (*
+     ->[прикладная программа, в которой пользователь может писать, отправлять и планировать электронную почту с любой из своих учетных записей электронной почты.] (* <- lang_ru;; *);;
+    ->[an application program where user can write, send, and schedule email from any of his email accounts] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. mail] (* <- lang_ru;; *);
+    [Def. mail] (* <- lang_en;; *);;
+*);;

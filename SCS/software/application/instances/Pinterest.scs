@@ -1,0 +1,12 @@
+Pinterest <- concept_application;
+=>nrel_main_idtf:
+    [Pinterest](* <- lang_ru;;*);
+    [Pinterest](* <- lang_en;;*);;
+Pinterestdefinition -> definition_of_Pinterest (*
+-> rrel_key_sc_element: Pinterest;;<= nrel_sc_text_translation: ... (*
+     ->[визуальная социальная медиа-платформа, где пользователи могут создавать и делиться булавками, создавать доски и делать покупки] (* <- lang_ru;; *);;
+    ->[a visual social media platform where users can make and share pins, create boards, and shop] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Pinterest] (* <- lang_ru;; *);
+    [Def. Pinterest] (* <- lang_en;; *);;
+*);;

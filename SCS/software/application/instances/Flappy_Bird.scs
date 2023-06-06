@@ -1,0 +1,12 @@
+Flappy_Bird <- concept_application;
+=>nrel_main_idtf:
+    [Flappy_Bird](* <- lang_ru;;*);
+    [Flappy_Bird](* <- lang_en;;*);;
+Flappy_Birddefinition -> definition_of_Flappy_Bird (*
+-> rrel_key_sc_element: Flappy_Bird;;<= nrel_sc_text_translation: ... (*
+     ->[мобильная игра, представляющая собой сайд-скроллер, в котором игрок управляет птицей, пытаясь пролететь между колоннами зеленых труб, не задев их] (* <- lang_ru;; *);;
+    ->[a mobile game that is a side-scroller where the player controls a bird, attempting to fly between columns of green pipes without hitting them] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Flappy_Bird] (* <- lang_ru;; *);
+    [Def. Flappy_Bird] (* <- lang_en;; *);;
+*);;

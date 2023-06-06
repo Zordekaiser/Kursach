@@ -1,0 +1,4 @@
+nrel_measurement_in_Gb <- measurement_of_fixed_measure;
+=> nrel_main_idtf:
+	[измерение в Гб*] (* <- lang_ru;; *);
+	[measurement in Gb*] (* <- lang_en;; *);;

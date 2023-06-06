@@ -1,0 +1,12 @@
+reminders <- concept_application;
+=>nrel_main_idtf:
+    [reminders](* <- lang_ru;;*);
+    [reminders](* <- lang_en;;*);;
+remindersdefinition -> definition_of_reminders (*
+-> rrel_key_sc_element: reminders;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое держит пользователя сосредоточенным и на ходу] (* <- lang_ru;; *);;
+    ->[an app that keeps the user focused and on track] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. reminders] (* <- lang_ru;; *);
+    [Def. reminders] (* <- lang_en;; *);;
+*);;

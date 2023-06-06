@@ -1,0 +1,12 @@
+Trello <- concept_application;
+=>nrel_main_idtf:
+    [Trello](* <- lang_ru;;*);
+    [Trello](* <- lang_en;;*);;
+Trellodefinition -> definition_of_Trello (*
+-> rrel_key_sc_element: Trello;;<= nrel_sc_text_translation: ... (*
+     ->[веб-приложение, которое позволяет вашей команде управлять любым типом проекта, рабочим процессом или отслеживанием задач] (* <- lang_ru;; *);;
+    ->[a web app that empowers your team to manage any type of project, workflow, or task tracking] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Trello] (* <- lang_ru;; *);
+    [Def. Trello] (* <- lang_en;; *);;
+*);;

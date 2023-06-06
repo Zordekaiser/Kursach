@@ -1,0 +1,27 @@
+concept_front_camera
+=> nrel_main_idtf:
+	[фронтальная камера] (* <- lang_ru;; *);
+	[front camera] (* <- lang_en;; *);;
+	
+definition -> definition_of_front_camera (*
+	-> rrel_key_sc_element: concept_front_camera;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Фронтальная камера мобильного телефона - это камера на передней стороне устройства, которая используется для съемки селфи, видеозвонков и других видов коммуникации, а также для распознавания лиц и разблокировки устройства. Она обычно имеет более низкое разрешение и функциональность, чем основная камера.] (* <- lang_ru;; *);;
+		-> [The front camera of a mobile phone is a camera on the front of the device that is used to take selfies, video calls and other types of communication, as well as face recognition and unlocking the device. It usually has a lower resolution and functionality than the main camera.] (* <- lang_en;; *);;
+	*);;
+
+	=> nrel_main_idtf:
+		[Опр. (фронтальная камера)] (* <- lang_ru;; *);
+		[Def. (front camera)] (* <- lang_en;; *);;
+
+	=> nrel_using_constants: {
+		concept_hardware;
+		concept_device
+	};;
+*);;
+
+sc_node_class ->
+	concept_device;
+	concept_hardware;;
+	

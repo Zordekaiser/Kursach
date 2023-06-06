@@ -1,0 +1,4 @@
+nrel_measurement_in_hertz <- measurement_of_fixed_measure;
+=> nrel_main_idtf:
+	[измерение в Герцах*] (* <- lang_ru;; *);
+	[measurement in Hertz*] (* <- lang_en;; *);;

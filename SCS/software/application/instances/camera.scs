@@ -1,0 +1,12 @@
+camera <- concept_application;
+=>nrel_main_idtf:
+    [camera](* <- lang_ru;;*);
+    [camera](* <- lang_en;;*);;
+cameradefinition -> definition_of_camera (*
+-> rrel_key_sc_element: camera;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое позволяет фотографировать и снимать видео] (* <- lang_ru;; *);;
+    ->[an app that allows taking pictures and shooting videos] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. camera] (* <- lang_ru;; *);
+    [Def. camera] (* <- lang_en;; *);;
+*);;

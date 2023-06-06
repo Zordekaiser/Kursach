@@ -1,9 +1,0 @@
-Spotify<-concept_application;
-=>nrel_main_idtf:
-    [Spotify]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_digital_music,_podcast,_and_video_service_that_gives_you_access_to_millions_of_songs_and_other_content_from_creators_all_over_the_world](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_digital_music,_podcast,_and_video_service_that_gives_you_access_to_millions_of_songs_and_other_content_from_creators_all_over_the_world](*<-lang_en;;*);;
-*);;

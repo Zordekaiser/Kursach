@@ -1,0 +1,55 @@
+ZTE_nubia_Red_Magic_7 <- concept_smartphone;
+=>nrel_main_idtf:
+    [ZTE_nubia_Red_Magic_7](* <- lang_ru;;*);
+    [ZTE_nubia_Red_Magic_7](* <- lang_en;;*);;
+ZTE_nubia_Red_Magic_7<=nrel_OS: concept_Android;;
+ZTE_nubia_Red_Magic_7<=nrel_processor: Snapdragon_8_Gen_1;;
+ZTE_nubia_Red_Magic_7<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+18Gb => nrel_measurement_in_Gb: 18(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_RAM: 18Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+64Mp => nrel_measurement_in_megapixels: 64(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_main_camera: 64Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+8Mp => nrel_measurement_in_megapixels: 8(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_front_camera: 8Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.8d => nrel_measurement_in_inches: 6.8(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_display_size: 6.8d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+ZTE_nubia_Red_Magic_7<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1080x2400](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_1](* <- lang_en;;*);;
+*);;4500Ah => nrel_measurement_in_Ah: 4500(*<-number;;*);;ZTE_nubia_Red_Magic_7<= nrel_battery: 4500Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

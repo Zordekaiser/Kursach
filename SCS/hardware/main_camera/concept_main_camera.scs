@@ -1,0 +1,26 @@
+concept_main_camera
+=> nrel_main_idtf:
+	[основная камера] (* <- lang_ru;; *);
+	[main camera] (* <- lang_en;; *);;
+	
+definition -> definition_of_main_camera (*
+	-> rrel_key_sc_element: concept_main_camera;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Основная камера мобильного телефона - это камера на задней стороне устройства, которая обычно имеет более высокое разрешение и функциональность, чем фронтальная камера. ] (* <- lang_ru;; *);;
+		-> [The main camera of a mobile phone is the camera on the back of the device, which usually has a higher resolution and functionality than the front camera.] (* <- lang_en;; *);;
+	*);;
+
+	=> nrel_main_idtf:
+		[Опр. (основная камера)] (* <- lang_ru;; *);
+		[Def. (main camera)] (* <- lang_en;; *);;
+
+	=> nrel_using_constants: {
+		concept_hardware;
+		concept_device
+	};;
+*);;
+
+sc_node_class ->
+	concept_device;
+	concept_hardware;;

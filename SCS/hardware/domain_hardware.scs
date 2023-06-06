@@ -1,0 +1,58 @@
+section_subject_domain_of_hardware
+
+<- non_atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область аппаратного обеспечения] (* <- lang_ru;; *);
+	[Section. Subject domain of hardware] (* <- lang_en;; *);
+
+<= nrel_section_decomposition: {
+	section_subject_domain_of_processors;
+	section_subject_domain_of_matrix;
+	section_subject_domain_of_main_camera;
+	section_subject_domain_of_front_camera
+};
+
+<- rrel_key_sc_element:
+	subject_domain_of_hardware;
+	concept_hardware;
+	concept_processor;
+	concept_matrix;
+	concept_front_camera;
+	concept_main_camera;;
+
+section_subject_domain_of_hardware=[*
+	subject_domain_of_hardware
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область аппаратного обеспечения] (* <- lang_ru;; *);
+		[Subject Domain of hardware] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_hardware;
+
+	-> rrel_not_maximum_studied_object_class:
+		concept_processor;
+		concept_matrix;
+		concept_front_camera;
+		concept_main_camera;
+
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_smartphone;
+
+	=> nrel_private_subject_domain:
+		subject_domain_of_processors;
+		subject_domain_of_matrix;
+		subject_domain_of_main_camera;
+		subject_domain_of_front_camera;;
+*];;
+
+sc_node_class ->
+	concept_hardware;
+	concept_processor;
+	concept_matrix;
+	concept_front_camera;
+	concept_main_camera;;
+

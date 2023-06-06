@@ -1,9 +1,0 @@
-voice_memos<-concept_application;
-=>nrel_main_idtf:
-    [voice_memos]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [an_application_program_that_is_built_for_recording_audio_using_the_built-in_microphone,_a_supported_headset,_or_an_external_microphone](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [an_application_program_that_is_built_for_recording_audio_using_the_built-in_microphone,_a_supported_headset,_or_an_external_microphone](*<-lang_en;;*);;
-*);;

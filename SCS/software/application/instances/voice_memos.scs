@@ -1,0 +1,12 @@
+voice_memos <- concept_application;
+=>nrel_main_idtf:
+    [voice_memos](* <- lang_ru;;*);
+    [voice_memos](* <- lang_en;;*);;
+voice_memosdefinition -> definition_of_voice_memos (*
+-> rrel_key_sc_element: voice_memos;;<= nrel_sc_text_translation: ... (*
+     ->[прикладная программа, созданная для записи звука с использованием встроенного микрофона, поддерживаемой гарнитуры или внешнего микрофона.] (* <- lang_ru;; *);;
+    ->[an application program that is built for recording audio using the built-in microphone, a supported headset, or an external microphone] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. voice_memos] (* <- lang_ru;; *);
+    [Def. voice_memos] (* <- lang_en;; *);;
+*);;

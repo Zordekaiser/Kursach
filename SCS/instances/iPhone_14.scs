@@ -1,0 +1,55 @@
+iPhone_14 <- concept_smartphone;
+=>nrel_main_idtf:
+    [iPhone_14](* <- lang_ru;;*);
+    [iPhone_14](* <- lang_en;;*);;
+iPhone_14<=nrel_OS: concept_iOS;;
+iPhone_14<=nrel_processor: A15_Bionic;;
+iPhone_14<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+6Gb => nrel_measurement_in_Gb: 6(*<-number;;*);;iPhone_14<= nrel_RAM: 6Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;iPhone_14<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+12Mp => nrel_measurement_in_megapixels: 12(*<-number;;*);;iPhone_14<= nrel_main_camera: 12Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+12Mp => nrel_measurement_in_megapixels: 12(*<-number;;*);;iPhone_14<= nrel_front_camera: 12Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.1d => nrel_measurement_in_inches: 6.1(*<-number;;*);;iPhone_14<= nrel_display_size: 6.1d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+iPhone_14<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[2532x1170](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Apple_A15_Bionic](* <- lang_en;;*);;
+*);;3279Ah => nrel_measurement_in_Ah: 3279(*<-number;;*);;iPhone_14<= nrel_battery: 3279Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

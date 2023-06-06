@@ -1,0 +1,12 @@
+LinkedIn <- concept_application;
+=>nrel_main_idtf:
+    [LinkedIn](* <- lang_ru;;*);
+    [LinkedIn](* <- lang_en;;*);;
+LinkedIndefinition -> definition_of_LinkedIn (*
+-> rrel_key_sc_element: LinkedIn;;<= nrel_sc_text_translation: ... (*
+     ->[крупнейшая в мире профессиональная сеть в Интернете. Вы можете использовать LinkedIn, чтобы найти подходящую работу или стажировку, установить и укрепить профессиональные отношения, а также приобрести навыки, необходимые для достижения успеха в вашей карьере.] (* <- lang_ru;; *);;
+    ->[the world's largest professional network on the internet. You can use LinkedIn to find the right job or internship, connect and strengthen professional relationships, and learn the skills you need to succeed in your career] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. LinkedIn] (* <- lang_ru;; *);
+    [Def. LinkedIn] (* <- lang_en;; *);;
+*);;

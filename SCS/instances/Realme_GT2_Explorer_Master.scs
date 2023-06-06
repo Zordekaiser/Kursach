@@ -1,0 +1,55 @@
+Realme_GT2_Explorer_Master <- concept_smartphone;
+=>nrel_main_idtf:
+    [Realme_GT2_Explorer_Master](* <- lang_ru;;*);
+    [Realme_GT2_Explorer_Master](* <- lang_en;;*);;
+Realme_GT2_Explorer_Master<=nrel_OS: concept_Android;;
+Realme_GT2_Explorer_Master<=nrel_processor: SM8475_Snapdragon_8_Plus_Gen_1;;
+Realme_GT2_Explorer_Master<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[OLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[OLED](* <- lang_en;;*);;
+*);;
+12Gb => nrel_measurement_in_Gb: 12(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_RAM: 12Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+256Gb => nrel_measurement_in_Gb: 256(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_HDD: 256Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+50Mp => nrel_measurement_in_megapixels: 50(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_main_camera: 50Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+20Mp => nrel_measurement_in_megapixels: 20(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_front_camera: 20Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.7d => nrel_measurement_in_inches: 6.7(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_display_size: 6.7d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Realme_GT2_Explorer_Master<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1082x2400](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[SM8475_Snapdragon_8_Plus_Gen_1](* <- lang_en;;*);;
+*);;5000Ah => nrel_measurement_in_Ah: 5000(*<-number;;*);;Realme_GT2_Explorer_Master<= nrel_battery: 5000Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

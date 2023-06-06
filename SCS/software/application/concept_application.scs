@@ -1,0 +1,32 @@
+concept_application
+=> nrel_main_idtf:
+	[приложение] (* <- lang_ru;; *);
+	[application] (* <- lang_en;; *);;
+
+definition -> definition_of_application (*
+	-> rrel_key_sc_element: concept_application;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Приложение - это программное обеспечение, которое предназначено для выполнения конкретных задач или функций на компьютере или другом устройстве. Оно может быть установлено на устройство пользователя или работать в онлайн-режиме через интернет.] (* <- lang_ru;; *);;
+		-> [An application is software that is designed to perform specific tasks or functions on a computer or other device. It can be installed on the user's device or work online via the Internet.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (приложение)] (* <- lang_ru;; *);
+		[Def. (application)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_software;
+		concept_hardware;
+		concept_device;
+		concept_smartphone
+
+	};;
+*);;
+
+sc_node_class ->
+	concept_application;
+	concept_software;
+	concept_hardware;
+	concept_device;
+	concept_smartphone;;

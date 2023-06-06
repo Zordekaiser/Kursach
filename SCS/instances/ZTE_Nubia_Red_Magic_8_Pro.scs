@@ -1,0 +1,55 @@
+ZTE_Nubia_Red_Magic_8_Pro <- concept_smartphone;
+=>nrel_main_idtf:
+    [ZTE_Nubia_Red_Magic_8_Pro](* <- lang_ru;;*);
+    [ZTE_Nubia_Red_Magic_8_Pro](* <- lang_en;;*);;
+ZTE_Nubia_Red_Magic_8_Pro<=nrel_OS: concept_Android;;
+ZTE_Nubia_Red_Magic_8_Pro<=nrel_processor: Snapdragon_8_Gen_2;;
+ZTE_Nubia_Red_Magic_8_Pro<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+16Gb => nrel_measurement_in_Gb: 16(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_RAM: 16Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+512Gb => nrel_measurement_in_Gb: 512(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_HDD: 512Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+50Mp => nrel_measurement_in_megapixels: 50(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_main_camera: 50Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+16Mp => nrel_measurement_in_megapixels: 16(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_front_camera: 16Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.8d => nrel_measurement_in_inches: 6.8(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_display_size: 6.8d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+ZTE_Nubia_Red_Magic_8_Pro<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1116x2480](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Qualcomm_Snapdragon_8_Gen_2](* <- lang_en;;*);;
+*);;6000Ah => nrel_measurement_in_Ah: 6000(*<-number;;*);;ZTE_Nubia_Red_Magic_8_Pro<= nrel_battery: 6000Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

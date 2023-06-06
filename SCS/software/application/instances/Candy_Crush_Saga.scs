@@ -1,0 +1,12 @@
+Candy_Crush_Saga <- concept_application;
+=>nrel_main_idtf:
+    [Candy_Crush_Saga](* <- lang_ru;;*);
+    [Candy_Crush_Saga](* <- lang_en;;*);;
+Candy_Crush_Sagadefinition -> definition_of_Candy_Crush_Saga (*
+-> rrel_key_sc_element: Candy_Crush_Saga;;<= nrel_sc_text_translation: ... (*
+     ->[бесплатная видеоигра, в которой игроки проходят уровни, меняя местами цветные конфеты на игровом поле, чтобы составить совпадение из трех или более одинаковых цветов, удаляя эти конфеты с доски и заменяя их новыми, которые потенциально может создать дополнительные совпадения] (* <- lang_ru;; *);;
+    ->[a free-to play tile matching video game where players complete levels by swapping colored pieces of candy on a game board to make a match of three or more of the same color, eliminating those candies from the board and replacing the with new ones, which could potentially create further matches] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Candy_Crush_Saga] (* <- lang_ru;; *);
+    [Def. Candy_Crush_Saga] (* <- lang_en;; *);;
+*);;

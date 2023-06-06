@@ -1,9 +1,0 @@
-photos<-concept_application;
-=>nrel_main_idtf:
-    [photos]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [an_app_that_is_used_to_organize,_edit_and_share_your_pictures](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [an_app_that_is_used_to_organize,_edit_and_share_your_pictures](*<-lang_en;;*);;
-*);;

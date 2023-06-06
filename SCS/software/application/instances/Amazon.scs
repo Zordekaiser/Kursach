@@ -1,0 +1,12 @@
+Amazon <- concept_application;
+=>nrel_main_idtf:
+    [Amazon](* <- lang_ru;;*);
+    [Amazon](* <- lang_en;;*);;
+Amazondefinition -> definition_of_Amazon (*
+-> rrel_key_sc_element: Amazon;;<= nrel_sc_text_translation: ... (*
+     ->[огромное интернет-предприятие, которое продает книги, музыку, фильмы, товары для дома, электронику, игрушки и многие другие товары либо напрямую, либо в качестве посредника между другими розничными торговцами и миллионами покупателей.] (* <- lang_ru;; *);;
+    ->[a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and millions of customers.] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Amazon] (* <- lang_ru;; *);
+    [Def. Amazon] (* <- lang_en;; *);;
+*);;

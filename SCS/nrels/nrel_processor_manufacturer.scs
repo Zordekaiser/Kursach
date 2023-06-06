@@ -1,0 +1,4 @@
+nrel_processor_manufacturer
+=> nrel_main_idtf:
+	[производитель процессоров*] (* <- lang_ru;; *);
+	[processor manufacturer*] (* <- lang_en;; *);;

@@ -1,0 +1,47 @@
+section_subject_domain_of_processors
+
+<- atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область процессоров] (* <- lang_ru;; *);
+	[Section. Subject domain of processors] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	subject_domain_of_processors;
+	concept_processor;
+	concept_hardware;
+	concept_manufacturer;
+	rrel_frequency;
+	rrel_number_of_cores;
+	rrel_contains;;
+
+section_subject_domain_of_processors=[*
+	subject_domain_of_processors
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область процессоров] (* <- lang_ru;; *);
+		[Subject Domain of processors] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_processor;
+		
+	-> rrel_not_maximum_studied_object_class:
+		concept_manufacturer;
+		concept_hardware;
+		
+	-> rrel_explored_relation:
+		nrel_measurement_in_hertz;
+		nrel_count_of_cores;
+		nrel_processor_manufacturer;
+		nrel_frenquency;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_hardware;;
+*];;
+
+sc_node_class ->
+	concept_manufacturer;
+	concept_processor;
+	concept_hardware;;
+	

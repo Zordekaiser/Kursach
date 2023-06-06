@@ -1,0 +1,12 @@
+clean_master <- concept_application;
+=>nrel_main_idtf:
+    [clean_master](* <- lang_ru;;*);
+    [clean_master](* <- lang_en;;*);;
+clean_masterdefinition -> definition_of_clean_master (*
+-> rrel_key_sc_element: clean_master;;<= nrel_sc_text_translation: ... (*
+     ->[прикладное приложение, которое повышает производительность вашего устройства за счет очистки ненужных файлов, оптимизации памяти устройства, обеспечения полной защиты от вирусов и управления установленными вами приложениями] (* <- lang_ru;; *);;
+    ->[an application app that improves your device's performance by cleaning junk files, optimizing device memory, providing complete protection against viruses and managing the apps you installed] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. clean_master] (* <- lang_ru;; *);
+    [Def. clean_master] (* <- lang_en;; *);;
+*);;

@@ -1,0 +1,36 @@
+section_subject_domain_of_matrix
+
+<- atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область матриц] (* <- lang_ru;; *);
+	[Section. Subject domain of matrix] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	subject_domain_of_matrix;
+	concept_matrix;
+	concept_hardware;
+	nrel_contained_in;;
+
+section_subject_domain_of_matrix=[*
+	subject_domain_of_matrix
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область матриц] (* <- lang_ru;; *);
+		[Subject Domain of matrix] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_matrix;
+		
+	-> rrel_not_maximum_studied_object_class:
+		concept_hardware;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_hardware;;
+*];;
+
+sc_node_class ->
+	concept_matrix;
+	concept_hardware;;
+	

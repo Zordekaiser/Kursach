@@ -1,0 +1,12 @@
+WhatsApp <- concept_application;
+=>nrel_main_idtf:
+    [WhatsApp](* <- lang_ru;;*);
+    [WhatsApp](* <- lang_en;;*);;
+WhatsAppdefinition -> definition_of_WhatsApp (*
+-> rrel_key_sc_element: WhatsApp;;<= nrel_sc_text_translation: ... (*
+     ->[бесплатный кроссплатформенный сервис обмена сообщениями. Он позволяет пользователям смартфонов iPhone и Android звонить и обмениваться текстовыми, фото-, аудио- и видеосообщениями с другими людьми по всему миру бесплатно, независимо от устройства получателя.] (* <- lang_ru;; *);;
+    ->[a free cross-platform messaging service. It lets users of iPhone and Android smartphones call and exchange text, photo, audio and video messages with others across the globe for free, regardless of the recipient's device] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. WhatsApp] (* <- lang_ru;; *);
+    [Def. WhatsApp] (* <- lang_en;; *);;
+*);;

@@ -1,9 +1,0 @@
-calendar<-concept_application;
-=>nrel_main_idtf:
-    [calendar]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [an_app_that_is_used_to_check,_create_and_edit_events,_appointments,_and_meetings](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [an_app_that_is_used_to_check,_create_and_edit_events,_appointments,_and_meetings](*<-lang_en;;*);;
-*);;

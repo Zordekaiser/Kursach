@@ -1,0 +1,55 @@
+OnePlus_11R <- concept_smartphone;
+=>nrel_main_idtf:
+    [OnePlus_11R](* <- lang_ru;;*);
+    [OnePlus_11R](* <- lang_en;;*);;
+OnePlus_11R<=nrel_OS: concept_Android;;
+OnePlus_11R<=nrel_processor: Snapdragon_8_Plus_Gen_1;;
+OnePlus_11R<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+16Gb => nrel_measurement_in_Gb: 16(*<-number;;*);;OnePlus_11R<= nrel_RAM: 16Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+256Gb => nrel_measurement_in_Gb: 256(*<-number;;*);;OnePlus_11R<= nrel_HDD: 256Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+50Mp => nrel_measurement_in_megapixels: 50(*<-number;;*);;OnePlus_11R<= nrel_main_camera: 50Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+16Mp => nrel_measurement_in_megapixels: 16(*<-number;;*);;OnePlus_11R<= nrel_front_camera: 16Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.74d => nrel_measurement_in_inches: 6.74(*<-number;;*);;OnePlus_11R<= nrel_display_size: 6.74d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+OnePlus_11R<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1240x2720](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Plus_Gen_1](* <- lang_en;;*);;
+*);;5000Ah => nrel_measurement_in_Ah: 5000(*<-number;;*);;OnePlus_11R<= nrel_battery: 5000Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

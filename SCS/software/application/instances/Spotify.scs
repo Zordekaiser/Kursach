@@ -1,0 +1,12 @@
+Spotify <- concept_application;
+=>nrel_main_idtf:
+    [Spotify](* <- lang_ru;;*);
+    [Spotify](* <- lang_en;;*);;
+Spotifydefinition -> definition_of_Spotify (*
+-> rrel_key_sc_element: Spotify;;<= nrel_sc_text_translation: ... (*
+     ->[сервис цифровой музыки, подкастов и видео, который дает вам доступ к миллионам песен и другому контенту от создателей со всего мира] (* <- lang_ru;; *);;
+    ->[a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Spotify] (* <- lang_ru;; *);
+    [Def. Spotify] (* <- lang_en;; *);;
+*);;

@@ -1,0 +1,12 @@
+weather <- concept_application;
+=>nrel_main_idtf:
+    [weather](* <- lang_ru;;*);
+    [weather](* <- lang_en;;*);;
+weatherdefinition -> definition_of_weather (*
+-> rrel_key_sc_element: weather;;<= nrel_sc_text_translation: ... (*
+     ->[прикладная программа, в которой пользователь может проверить текущую погоду, увидеть почасовой прогноз и просмотреть прогноз на 10 дней] (* <- lang_ru;; *);;
+    ->[an application program where user can  check the current weather, see the hourly forecast and view the 10-day forecast] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. weather] (* <- lang_ru;; *);
+    [Def. weather] (* <- lang_en;; *);;
+*);;

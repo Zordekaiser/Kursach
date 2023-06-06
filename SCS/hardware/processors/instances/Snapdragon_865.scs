@@ -1,0 +1,19 @@
+Snapdragon_865 <- concept_processor;
+=>nrel_main_idtf:
+    [Snapdragon_865](* <- lang_ru;;*);
+    [Snapdragon_865](* <- lang_en;;*);;
+Snapdragon_865<=nrel_count_of_cores: 8(* <- number;;*);;
+Snapdragon_865<=nrel_frenquency: 2840Hz(*
+    <- sc_node_class;;
+    <- exact_value;;
+    <- concept_frenquency;;
+*);;
+Snapdragon_865<=nrel_processor_manufacturer: Qualcomm(*
+    <- concept_manufacturer;;
+*);;
+2840Hz =>  nrel_measurement_in_hertz: 2840(*<-number;;*);;
+sc_node_norole_relation ->
+	nrel_measurement_in_hertz;
+	nrel_count_of_cores;
+	nrel_processor_manufacturer;
+	nrel_frenquency;;

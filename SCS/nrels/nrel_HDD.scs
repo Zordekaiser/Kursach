@@ -1,0 +1,4 @@
+nrel_HDD
+=> nrel_main_idtf:
+	[объём внутренней памяти*] (* <- lang_ru;; *);
+	[HDD*] (* <- lang_en;; *);;

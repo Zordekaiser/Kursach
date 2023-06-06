@@ -1,0 +1,12 @@
+Twitter <- concept_application;
+=>nrel_main_idtf:
+    [Twitter](* <- lang_ru;;*);
+    [Twitter](* <- lang_en;;*);;
+Twitterdefinition -> definition_of_Twitter (*
+-> rrel_key_sc_element: Twitter;;<= nrel_sc_text_translation: ... (*
+     ->[приложение для общения и поддержания связи посредством обмена быстрыми и частыми сообщениями] (* <- lang_ru;; *);;
+    ->[an application  to communicate and stay connected through the exchange of quick, frequent messages] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Twitter] (* <- lang_ru;; *);
+    [Def. Twitter] (* <- lang_en;; *);;
+*);;

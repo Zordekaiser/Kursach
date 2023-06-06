@@ -1,9 +1,0 @@
-camera<-concept_application;
-=>nrel_main_idtf:
-    [camera]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [an_app_that_allows_taking_pictures_and_shooting_videos](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [an_app_that_allows_taking_pictures_and_shooting_videos](*<-lang_en;;*);;
-*);;

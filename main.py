@@ -5,7 +5,7 @@ import pymongo
 from sc_client.client import connect, disconnect, create_elements
 from sc_kpm.utils import get_element_by_norole_relation, get_link_content_data
 from sc_kpm import ScKeynodes
-from Foo import get_smartphones_idtf, get_params_smartphone, get_params_app, get_definition
+from Foo import get_smartphones_addrs, get_processors_addrs, get_params_smartphone, get_params_app, get_params_processor, get_definition
 from operator import itemgetter
 
 url = "ws://localhost:8090/ws_json"
@@ -13,23 +13,23 @@ connect(url)
 
 def get_processor():
     buffer = []
-    idtf = get_smartphones_idtf('concept_processor')
+    idtf = get_processors_addrs()[1:]
     for i in idtf:
-        buffer.append(get_params_smartphone(i))
+        buffer.append(get_params_processor(i))
     return buffer
 def get_smartphones():
     buffer = []
-    idtf = get_smartphones_idtf('concept_smartphone')
+    idtf = get_smartphones_addrs()[3:]
     for i in idtf:
         buffer.append(get_params_smartphone(i))
     return buffer
 
-def get_apps():
-    buffer = []
-    idtf = get_smartphones_idtf('concept_application')
-    for i in idtf:
-        buffer.append(get_params_app(i))
-    return buffer
+# def get_apps():
+#     buffer = []
+#     idtf = get_smartphones_idtf('concept_application')
+#     for i in idtf:
+#         buffer.append(get_params_app(i))
+#     return buffer
 
 def extract_arg(arg):
     buffer = arg.split()
@@ -91,9 +91,9 @@ def create(message):
     else:
         bot.send_message(message.chat.id, emoji.emojize("<i>Успешно создан! :thumbs_up:</i>"), parse_mode='html')
 
-
+# print(get_smartphones())
 class Smarphones:
-    list_params = ['name', 'OS', 'processor', 'matrix', 'RAM', 'HDD', 'main_camera', 'front_camera', 'display_size', 'display_resolution', 'battery']
+    list_params = ['name', 'OS', 'processor', 'RAM', 'HDD', 'main_camera', 'front_camera', 'display_size', 'battery']
     buffer_smartphones = []
     buffer_smartphones_counter = 0
 
@@ -103,7 +103,7 @@ class Apps:
     buffer_apps_counter = 0
 
 class Processors:
-    list_params = ['name', 'number_of_cores', 'frequency', 'graphics', 'manufacturer']
+    list_params = ['name', 'count_of_cores', 'frenquency', 'processor_manufacturer']
     buffer_processors = []
     buffer_processors_counter = 0
 
@@ -152,7 +152,7 @@ def func(message):
     elif message.text == 'Хочу смотреть фильмы и сериалы':
         mess = ""
 
-        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('display_resolution', 'display_size'))
+        buf_smartphone.buffer_smartphones = sorted(get_smartphones(), key=itemgetter('display_size'))
         for i in buf_smartphone.list_params:
             mess += f"<i>{i}: {buf_smartphone.buffer_smartphones[buf_smartphone.buffer_smartphones_counter][i]}\n</i>"
         mess += "<i>Выберите дейтвие:</i>"
@@ -235,15 +235,13 @@ def func(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Процессор')
         button2 = types.KeyboardButton('Камера')
-        button3 = types.KeyboardButton('Матрицы и их разновидности')
-        button4 = types.KeyboardButton('Сенсоры и их разновидности')
+        button3 = types.KeyboardButton('Матрицы')
         button5 = types.KeyboardButton('Операционные системы и их разновидности')
-        button6 = types.KeyboardButton('Приложения')
         button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button3, button4, button5, button6, button)
+        markup.add(button1, button2, button3, button5, button)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Процессор':
-        text = get_definition('concept_processor')
+        text = get_definition('processor')
         mess = f'<i>{text}</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Какие процессоры сущесвтуют?')
@@ -266,22 +264,22 @@ def func(message):
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Следующий процессор':
 
-        if buf_processor.buffer_processors_counter > len(buf_processor.buffer_processors):
-            buf_processor.buffer_processors_counter -= 1
+        if buf_processor.buffer_processors_counter < len(buf_processor.buffer_processors):
+            buf_processor.buffer_processors_counter += 1
             mess = ""
             for i in buf_processor.list_params:
                 mess += f"<i>{i}: {buf_processor.buffer_processors[buf_processor.buffer_processors_counter][i]}\n</i>"
             mess += "<i>Выберите дейтвие:</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующее приложние')
-            button2 = types.KeyboardButton('Предыдущее приложение')
+            button1 = types.KeyboardButton('Следующий процессор')
+            button2 = types.KeyboardButton('Предыдущий процессор')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button2, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
         else:
-            mess = "<i>Вы вернулись в начало списка</i>"
+            mess = "<i>Вы пришли в конец списка</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующее приложние')
+            button1 = types.KeyboardButton('Предыдущий процессор')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
@@ -294,122 +292,45 @@ def func(message):
                 mess += f"<i>{i}: {buf_processor.buffer_processors[buf_processor.buffer_processors_counter][i]}\n</i>"
             mess += "<i>Выберите дейтвие:</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующее приложние')
-            button2 = types.KeyboardButton('Предыдущее приложение')
+            button1 = types.KeyboardButton('Следующий процессор')
+            button2 = types.KeyboardButton('Предыдущий процессор')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button2, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
         else:
             mess = "<i>Вы вернулись в начало списка</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующее приложние')
+            button1 = types.KeyboardButton('Следующий процессор')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
     elif message.text == 'Камера':
-        text = get_definition('concept_camera')
+        text = get_definition('main_camera')
         mess = f'<i>{text}</i>'
-        text = buffer["definition"]
-        mess = f'<i>{underscoreToSpace(text)}</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Вернуться к комплектующим')
         button2 = types.KeyboardButton('Вернуться в главное меню')
         markup.add(button1, button2)
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Сенсоры и их разновидности' or message.text == 'Вернуться к сенсорам':
-        text = get_definition('concept_sensor')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Акселерометр')
-        button3 = types.KeyboardButton('Гироскоп')
-        button4 = types.KeyboardButton('Датчик освещённости')
-        button5 = types.KeyboardButton('Датчик приближения')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button3, button4, button5, button)
-        bot.send_message(message.chat.id, mess, parse_mode='html')
-        mess = "<i>Выберите команду:</i>"
-        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Акселерометр':
-        text = get_definition('concept_processor')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться к сенсорам')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button)
-        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Гироскоп':
-        text = get_definition('concept_processor')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться к сенсорам')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button)
-        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Датчик освещённости':
-        text = get_definition('concept_processor')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться к сенсорам')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button)
-        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Датчик приближения':
-        text = get_definition('concept_processor')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться к сенсорам')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button)
-        bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Матрицы и их разновидности':
-        text = get_definition('concept_processor')
+    elif message.text == 'Матрицы':
+        text = get_definition('matrix')
         mess = f'<i>{text}</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         button1 = types.KeyboardButton('Вернуться к комплектующим')
         button2 = types.KeyboardButton('Вернуться в главное меню')
         markup.add(button1, button2)
         bot.send_message(message.chat.id, mess, parse_mode='html')
-        countOfMatrix = dataCollection.count_documents({'key': 'matrix'})
-        matrixs = dataCollection.find({'key': 'matrix'})
-        mess = 'Существуют следующие типы матриц '
-        text = ''
-        for i in range(0, countOfMatrix):
-            buffer = matrixs.next()
-            text += buffer["matrix"]
-            if i != countOfMatrix - 1:
-                text += ", "
-            else:
-                text += '.'
-        bot.send_message(message.chat.id, mess+text, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Операционные системы и их разновидности':
-        text = get_definition('concept_OS')
-        mess = f'<i>{text}</i>'
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Вернуться к комплектующим')
-        button2 = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2)
-        mess += '/nСуществуют следующие типы операционных систем: Android, iOS.'
-        bot.send_message(message.chat.id, mess+text, parse_mode='html', reply_markup=markup)
-    elif message.text == 'Приложения':
-        text = get_definition('concept_application')
-        mess = f'<i>{text}</i>'
-        mess += "/n"
 
-        buf_app.buffer_apps = get_apps()
-        for i in buf_app.list_params:
-            mess += f"<i>{i}: {buf_app.buffer_apps[buf_app.buffer_apps_counter][i]}\n</i>"
-        mess += "<i>Выберите дейтвие:</i>"
+    elif message.text == 'Операционные системы и их разновидности':
+        text = get_definition('OS')
+        mess = f'<i>{text}</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        button1 = types.KeyboardButton('Следующее приложение')
-        button2 = types.KeyboardButton('Предыдущее приложение')
-        button = types.KeyboardButton('Вернуться в главное меню')
-        markup.add(button1, button2, button)
+        button1 = types.KeyboardButton('Вернуться к комплектующим')
+        button2 = types.KeyboardButton('Вернуться в главное меню')
+        markup.add(button1, button2)
+        mess += '\n<i>Существуют следующие типы операционных систем: Android, iOS.</i>'
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+
     elif message.text == 'Следующее приложение':
 
         if buf_app.buffer_apps_counter < len(buf_app.buffer_apps):
@@ -419,15 +340,15 @@ def func(message):
                 mess += f"<i>{i}: {buf_app.buffer_apps[buf_app.buffer_apps_counter][i]}\n</i>"
             mess += "<i>Выберите дейтвие:</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующий телефон')
-            button2 = types.KeyboardButton('Предыдущий телефон')
+            button1 = types.KeyboardButton('Следующее приложение')
+            button2 = types.KeyboardButton('Предыдущее приложение')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button2, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
         else:
             mess = "<i>Были представлены все приложения</i>"
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            button1 = types.KeyboardButton('Следующий телефон')
+            button1 = types.KeyboardButton('Предыдущее приложение')
             button = types.KeyboardButton('Вернуться в главное меню')
             markup.add(button1, button)
             bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)

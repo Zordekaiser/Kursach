@@ -1,0 +1,46 @@
+section_subject_domain_of_application
+
+<- atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область приложений] (* <- lang_ru;; *);
+	[Section. Subject domain of applications] (* <- lang_en;; *);
+
+<= nrel_section_decomposition: {
+	section_subject_domain_of_OS;
+	section_subject_domain_of_application
+};
+
+<- rrel_key_sc_element:
+	subject_domain_of_application;
+	concept_smartphone;
+	concept_device;
+	concept_application;
+	concept_software;;
+	
+section_subject_domain_of_application=[*
+	subject_domain_of_application
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область приложений] (* <- lang_ru;; *);
+		[Subject Domain of applications] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_application;
+
+	-> rrel_not_maximum_studied_object_class:
+		concept_smartphone;
+		concept_device;
+		concept_software;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_software;;
+*];;
+
+sc_class_node -> 
+	concept_smartphone;
+	concept_device;
+	concept_application;
+	concept_software;;
+	

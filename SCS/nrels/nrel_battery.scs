@@ -1,0 +1,4 @@
+nrel_battery
+=> nrel_main_idtf:
+	[ёмкость баттареи*] (* <- lang_ru;; *);
+	[battery*] (* <- lang_en;; *);;

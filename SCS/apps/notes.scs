@@ -1,9 +1,0 @@
-notes<-concept_application;
-=>nrel_main_idtf:
-    [notes]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_handy,_built-in_app_that_serves_as_an_easy_and_efficient_way_to_jot_down_thoughts,_create_lists,_and_more](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_handy,_built-in_app_that_serves_as_an_easy_and_efficient_way_to_jot_down_thoughts,_create_lists,_and_more](*<-lang_en;;*);;
-*);;

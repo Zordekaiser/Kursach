@@ -1,0 +1,31 @@
+concept_software
+=> nrel_main_idtf:
+	[программное обеспечение] (* <- lang_ru;; *);
+	[software] (* <- lang_en;; *);;
+
+definition -> definition_of_software (*
+	-> rrel_key_sc_element: concept_software;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Программное обеспечение - это совокупность программ, инструментов и данных, которые используются для управления и выполнения задач на компьютере или другом устройстве. Оно обеспечивает работу аппаратного обеспечения и позволяет пользователям выполнять различные функции и задачи, включая обработку данных, создание документов, просмотр мультимедийных файлов и многое другое.] (* <- lang_ru;; *);;
+		-> [Software is a collection of programs, tools, and data that are used to manage and perform tasks on a computer or computer. It does the work of the hardware and allows users to perform various functions including data processing, document creation, file browsing, and more.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (программное обеспечение)] (* <- lang_ru;; *);
+		[Def. (software)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_OS;
+		concept_hardware;
+		concept_software;
+		concept_application
+
+	};;
+*);;
+
+sc_node_class ->
+	concept_OS;
+	concept_hardware;
+	concept_software;
+	concept_application;;

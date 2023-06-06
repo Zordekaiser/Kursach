@@ -1,9 +1,0 @@
-mail<-concept_application;
-=>nrel_main_idtf:
-    [mail]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [an_application_program_where_user_can_write,_send,_and_schedule_email_from_any_of_his_email_accounts](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [an_application_program_where_user_can_write,_send,_and_schedule_email_from_any_of_his_email_accounts](*<-lang_en;;*);;
-*);;

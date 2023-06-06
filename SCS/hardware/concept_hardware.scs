@@ -1,0 +1,26 @@
+concept_hardware
+=> nrel_main_idtf:
+	[аппаратное обеспечение] (* <- lang_ru;; *);
+	[hardware] (* <- lang_en;; *);;
+	
+definition -> definition_of_hardware (*
+	-> rrel_key_sc_element: concept_hardware;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Аппаратное обеспечение - это физические компоненты компьютера или устройства] (* <- lang_ru;; *);;
+		-> [Hardware is the physical components of a computer or device] (* <- lang_en;; *);;
+	*);;
+
+	=> nrel_main_idtf:
+		[Опр. (аппаратное обеспечение)] (* <- lang_ru;; *);
+		[Def. (hardware)] (* <- lang_en;; *);;
+
+	=> nrel_using_constants: {
+		concept_computer;
+		concept_device
+	};;
+*);;
+
+sc_node_class ->
+	concept_computer;
+	concept_device;;

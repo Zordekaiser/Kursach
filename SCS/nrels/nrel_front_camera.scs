@@ -1,0 +1,4 @@
+nrel_front_camera
+=> nrel_main_idtf:
+	[фронтальная камера*] (* <- lang_ru;; *);
+	[front camera*] (* <- lang_en;; *);;

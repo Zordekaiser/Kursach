@@ -1,0 +1,12 @@
+messages <- concept_application;
+=>nrel_main_idtf:
+    [messages](* <- lang_ru;;*);
+    [messages](* <- lang_en;;*);;
+messagesdefinition -> definition_of_messages (*
+-> rrel_key_sc_element: messages;;<= nrel_sc_text_translation: ... (*
+     ->[удобное встроенное приложение, которое используется для отправки и получения текстовых сообщений, фотографий, голосовых сообщений и видео] (* <- lang_ru;; *);;
+    ->[a handy, built-in app that is used to send and receive text messages, photos, voice messages, and video] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. messages] (* <- lang_ru;; *);
+    [Def. messages] (* <- lang_en;; *);;
+*);;

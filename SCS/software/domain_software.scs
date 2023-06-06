@@ -1,0 +1,47 @@
+section_subject_domain_of_software
+
+<- non_atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область программного обеспечения] (* <- lang_ru;; *);
+	[Section. Subject domain of software] (* <- lang_en;; *);
+
+<= nrel_section_decomposition: {
+	section_subject_domain_of_OS;
+	section_subject_domain_of_application
+};
+
+<- rrel_key_sc_element:
+	subject_domain_of_software;
+	concept_software;
+	concept_OS;
+	concept_application;;
+	
+section_subject_domain_of_software=[*
+	subject_domain_of_software
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область программного обеспечения] (* <- lang_ru;; *);
+		[Subject Domain of software] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_software;
+
+	-> rrel_not_maximum_studied_object_class:
+		concept_OS;
+		concept_application;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_smartphones;
+
+	=> nrel_private_subject_domain:
+		subject_domain_of_OS;
+		subject_domain_of_applications;;
+*];;
+
+sc_class_node -> 
+	concept_OS;
+	concept_software;
+	concept_application;;
+	

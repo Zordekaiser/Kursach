@@ -1,0 +1,12 @@
+Instagram <- concept_application;
+=>nrel_main_idtf:
+    [Instagram](* <- lang_ru;;*);
+    [Instagram](* <- lang_en;;*);;
+Instagramdefinition -> definition_of_Instagram (*
+-> rrel_key_sc_element: Instagram;;<= nrel_sc_text_translation: ... (*
+     ->[бесплатное приложение для обмена фотографиями и видео, доступное на iPhone и Android. Люди могут загружать фотографии или видео в наш сервис и делиться ими со своими подписчиками или с избранной группой друзей. Они также могут просматривать, комментировать и лайкать публикации своих друзей в Instagram.] (* <- lang_ru;; *);;
+    ->[a free photo and video sharing app available on iPhone and Android. People can upload photos or videos to our service and share them with their followers or with a select group of friends. They can also view, comment and like posts shared by their friends on Instagram] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Instagram] (* <- lang_ru;; *);
+    [Def. Instagram] (* <- lang_en;; *);;
+*);;

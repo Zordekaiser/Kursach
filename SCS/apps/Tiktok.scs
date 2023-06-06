@@ -1,9 +1,0 @@
-Tiktok<-concept_application;
-=>nrel_main_idtf:
-    [Tiktok]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_social_media_platform_for_creating,_sharing_and_discovering_short_videos](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_social_media_platform_for_creating,_sharing_and_discovering_short_videos](*<-lang_en;;*);;
-*);;

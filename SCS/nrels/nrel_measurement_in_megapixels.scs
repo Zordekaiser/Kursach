@@ -1,0 +1,4 @@
+nrel_measurement_in_megapixels <- measurement_of_fixed_measure;
+=> nrel_main_idtf:
+	[измерение в мегапикселях*] (* <- lang_ru;; *);
+	[measurement in megapixels*] (* <- lang_en;; *);;

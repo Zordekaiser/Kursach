@@ -1,9 +1,0 @@
-Flappy_Bird<-concept_application;
-=>nrel_main_idtf:
-    [Flappy_Bird]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_mobile_game_that_is_a_side-scroller_where_the_player_controls_a_bird,_attempting_to_fly_between_columns_of_green_pipes_without_hitting_them](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_mobile_game_that_is_a_side-scroller_where_the_player_controls_a_bird,_attempting_to_fly_between_columns_of_green_pipes_without_hitting_them](*<-lang_en;;*);;
-*);;

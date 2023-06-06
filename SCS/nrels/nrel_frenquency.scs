@@ -1,0 +1,4 @@
+nrel_frenquency
+=> nrel_main_idtf:
+	[частота процессора*] (* <- lang_ru;; *);
+	[frenquency of processor*] (* <- lang_en;; *);;

@@ -1,0 +1,24 @@
+concept_matrix
+=> nrel_main_idtf:
+	[матрица] (* <- lang_ru;; *);
+	[matrix] (* <- lang_en;; *);;
+	
+definition -> definition_of_matrix (*
+	-> rrel_key_sc_element: concept_matrix;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Матрица экрана - это технология, которая используется для отображения изображения на экране устройства. Она состоит из множества маленьких точек, называемых пикселями, которые светятся определенным цветом и создают изображение. ] (* <- lang_ru;; *);;
+		-> [A screen matrix is ​​a technology that is used to display an image on a device screen. It is made up of many small dots, called pixels, that glow in a certain color and create an image.] (* <- lang_en;; *);;
+	*);;
+
+	=> nrel_main_idtf:
+		[Опр. (матрица)] (* <- lang_ru;; *);
+		[Def. (matrix)] (* <- lang_en;; *);;
+
+	=> nrel_using_constants: {
+		concept_hardware
+	};;
+*);;
+
+sc_node_class ->
+	concept_hardware;;

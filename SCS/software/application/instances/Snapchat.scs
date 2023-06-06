@@ -1,0 +1,12 @@
+Snapchat <- concept_application;
+=>nrel_main_idtf:
+    [Snapchat](* <- lang_ru;;*);
+    [Snapchat](* <- lang_en;;*);;
+Snapchatdefinition -> definition_of_Snapchat (*
+-> rrel_key_sc_element: Snapchat;;<= nrel_sc_text_translation: ... (*
+     ->[веб-приложение, используемое для создания мультимедийных сообщений, называемых «снимками»; снимки могут состоять из фотографии или короткого видео и могут быть отредактированы для включения фильтров и эффектов, текстовых подписей и рисунков.] (* <- lang_ru;; *);;
+    ->[a web app used for creating multimedia messages referred to as "snaps"; snaps can consist of a photo or a short video, and can be edited to include filters and effects, text captions, and drawings] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Snapchat] (* <- lang_ru;; *);
+    [Def. Snapchat] (* <- lang_en;; *);;
+*);;

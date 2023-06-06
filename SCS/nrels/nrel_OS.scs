@@ -1,0 +1,4 @@
+nrel_OS
+=> nrel_main_idtf:
+	[операционная система*] (* <- lang_ru;; *);
+	[operating system*] (* <- lang_en;; *);;

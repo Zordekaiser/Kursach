@@ -1,9 +1,0 @@
-Gmail<-concept_application;
-=>nrel_main_idtf:
-    [Gmail]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_hybrid_app_your_email_is_stored_safely_in_the_cloud_with](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_hybrid_app_your_email_is_stored_safely_in_the_cloud_with](*<-lang_en;;*);;
-*);;

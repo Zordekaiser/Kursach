@@ -1,0 +1,55 @@
+Lenovo_Legion_Y90 <- concept_smartphone;
+=>nrel_main_idtf:
+    [Lenovo_Legion_Y90](* <- lang_ru;;*);
+    [Lenovo_Legion_Y90](* <- lang_en;;*);;
+Lenovo_Legion_Y90<=nrel_OS: concept_Android;;
+Lenovo_Legion_Y90<=nrel_processor: Snapdragon_8_Gen_1;;
+Lenovo_Legion_Y90<=nrel_matrix:...(*
+    <-concept_matrix;;
+   =>nrel_main_idtf:[AMOLED](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[AMOLED](* <- lang_en;;*);;
+*);;
+18Gb => nrel_measurement_in_Gb: 18(*<-number;;*);;Lenovo_Legion_Y90<= nrel_RAM: 18Gb(*
+  <- concept_RAM;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+256Gb => nrel_measurement_in_Gb: 256(*<-number;;*);;Lenovo_Legion_Y90<= nrel_HDD: 256Gb(*
+  <- concept_HDD;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+64Mp => nrel_measurement_in_megapixels: 64(*<-number;;*);;Lenovo_Legion_Y90<= nrel_main_camera: 64Mp(*
+  <- concept_main_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+16Mp => nrel_measurement_in_megapixels: 16(*<-number;;*);;Lenovo_Legion_Y90<= nrel_front_camera: 16Mp(*
+  <- concept_front_camera;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+6.92d => nrel_measurement_in_inches: 6.92(*<-number;;*);;Lenovo_Legion_Y90<= nrel_display_size: 6.92d(*
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+Lenovo_Legion_Y90<=nrel_display_resolution:...(*
+    <-concept_display_resolution;;
+   =>nrel_main_idtf:[1080x2460](* <- lang_ru;;*);;
+   =>nrel_main_idtf:[Snapdragon_8_Gen_1](* <- lang_en;;*);;
+*);;5600Ah => nrel_measurement_in_Ah: 5600(*<-number;;*);;Lenovo_Legion_Y90<= nrel_battery: 5600Ah(*
+    <-concept_battery;;
+     <- concept_exact_value;;
+      <- sc_node_class;;
+*);;
+sc_node_norole_relation ->
+	nrel_OS;
+	nrel_processor;
+	nrel_matrix;
+	nrel_RAM;
+ 	nrel_HDD;
+ 	nrel_main_camera;
+	nrel_front_camera;
+   	nrel_display_size;
+    nrel_display_resolution;
+  	nrel_battery;;

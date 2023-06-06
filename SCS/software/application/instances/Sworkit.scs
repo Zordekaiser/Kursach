@@ -1,0 +1,12 @@
+Sworkit <- concept_application;
+=>nrel_main_idtf:
+    [Sworkit](* <- lang_ru;;*);
+    [Sworkit](* <- lang_en;;*);;
+Sworkitdefinition -> definition_of_Sworkit (*
+-> rrel_key_sc_element: Sworkit;;<= nrel_sc_text_translation: ... (*
+     ->[гибридное приложение, которое предоставляет персонализированные фитнес-программы для наращивания силы, похудения, повышения гибкости и преодоления боли] (* <- lang_ru;; *);;
+    ->[a hybrid app that provides personalized fitness programs for building strength, losing weight, increasing flexibility, and conquering pain] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Sworkit] (* <- lang_ru;; *);
+    [Def. Sworkit] (* <- lang_en;; *);;
+*);;

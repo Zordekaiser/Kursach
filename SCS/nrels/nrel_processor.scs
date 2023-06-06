@@ -1,0 +1,4 @@
+nrel_processor
+=> nrel_main_idtf:
+	[процессор*] (* <- lang_ru;; *);
+	[processor*] (* <- lang_en;; *);;

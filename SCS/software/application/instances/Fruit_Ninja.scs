@@ -1,0 +1,12 @@
+Fruit_Ninja <- concept_application;
+=>nrel_main_idtf:
+    [Fruit_Ninja](* <- lang_ru;;*);
+    [Fruit_Ninja](* <- lang_en;;*);;
+Fruit_Ninjadefinition -> definition_of_Fruit_Ninja (*
+-> rrel_key_sc_element: Fruit_Ninja;;<= nrel_sc_text_translation: ... (*
+     ->[видеоигра, в которой игрок должен нарезать фрукты, которые подбрасываются в воздух, проводя пальцем по сенсорному экрану устройства, и не должен нарезать бомбы] (* <- lang_ru;; *);;
+    ->[a video game, where the player must slice fruit that is thrown into the air by swiping the device's touch screen with their finger and must not slice bombs] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Fruit_Ninja] (* <- lang_ru;; *);
+    [Def. Fruit_Ninja] (* <- lang_en;; *);;
+*);;

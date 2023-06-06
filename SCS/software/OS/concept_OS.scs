@@ -1,0 +1,32 @@
+concept_OS
+=> nrel_main_idtf:
+	[операционная система] (* <- lang_ru;; *);
+	[operating system] (* <- lang_en;; *);;
+
+definition -> definition_of_OS (*
+	-> rrel_key_sc_element: concept_OS;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Операционная система (ОС) - это программное обеспечение, которое управляет ресурсами компьютера или другого устройства, управляет взаимодействием между пользователем и компьютером, а также обеспечивает работу других приложений. ОС выполняет функции управления памятью, процессами, файловой системой, сетевыми соединениями и другими ресурсами компьютера. Она является базовой программой, без которой работа с компьютером невозможна.] (* <- lang_ru;; *);;
+		-> [An operating system (OS) is software that manages the resources of a computer or other device, manages the interaction between the user and the computer, and enables other applications to run. The OS performs the functions of managing memory, processes, the file system, network connections, and other computer resources. It is a basic program without which work with a computer is impossible.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (операционная система)] (* <- lang_ru;; *);
+		[Def. (operating system)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_OS;
+		concept_software;
+		concept_application;
+		concept_device;
+		concept_smartphone
+	};;
+*);;
+
+sc_node_class ->
+	concept_OS;
+	concept_software;
+	concept_application;
+	concept_device;
+	concept_smartphone;;

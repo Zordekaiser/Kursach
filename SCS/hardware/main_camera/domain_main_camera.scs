@@ -1,0 +1,41 @@
+section_subject_domain_of_main_camera
+
+<- atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная основных камер] (* <- lang_ru;; *);
+	[Section. Subject domain of main camera] (* <- lang_en;; *);
+	
+<- rrel_key_sc_element:
+	subject_domain_of_main_camera;
+	concept_main_camera;
+	concept_hardware;
+	nrel_contained_in;;
+
+section_subject_domain_of_main_camera=[*
+	subject_domain_of_main_camera
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная осносных камер] (* <- lang_ru;; *);
+		[Subject Domain of main camera] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_main_camera;
+		
+	-> rrel_not_maximum_studied_object_class:
+		concept_hardware;
+		
+	-> rrel_explored_relation:
+		nrel_contained_in;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_hardware;;
+*];;
+
+sc_node_class ->
+	concept_main_camera;
+	concept_hardware;;
+	
+sc_node_norole_relation ->
+	nrel_contained_in;;

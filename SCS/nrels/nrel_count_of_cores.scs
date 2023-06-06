@@ -1,0 +1,4 @@
+nrel_count_of_cores
+=> nrel_main_idtf:
+	[количество ядер*] (* <- lang_ru;; *);
+	[count of cores*] (* <- lang_en;; *);;

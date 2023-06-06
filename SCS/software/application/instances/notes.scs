@@ -1,0 +1,12 @@
+notes <- concept_application;
+=>nrel_main_idtf:
+    [notes](* <- lang_ru;;*);
+    [notes](* <- lang_en;;*);;
+notesdefinition -> definition_of_notes (*
+-> rrel_key_sc_element: notes;;<= nrel_sc_text_translation: ... (*
+     ->[удобное встроенное приложение, которое служит простым и эффективным способом записывать мысли, создавать списки и т. д.] (* <- lang_ru;; *);;
+    ->[a handy, built-in app that serves as an easy and efficient way to jot down thoughts, create lists, and more] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. notes] (* <- lang_ru;; *);
+    [Def. notes] (* <- lang_en;; *);;
+*);;

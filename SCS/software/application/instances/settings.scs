@@ -1,0 +1,12 @@
+settings <- concept_application;
+=>nrel_main_idtf:
+    [settings](* <- lang_ru;;*);
+    [settings](* <- lang_en;;*);;
+settingsdefinition -> definition_of_settings (*
+-> rrel_key_sc_element: settings;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое позволяет пользователю настроить свое устройство в соответствии со своими предпочтениями] (* <- lang_ru;; *);;
+    ->[an app that lets the user customize his device to fit his preferences] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. settings] (* <- lang_ru;; *);
+    [Def. settings] (* <- lang_en;; *);;
+*);;

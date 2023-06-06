@@ -1,0 +1,26 @@
+concept_Android
+=> nrel_main_idtf:
+	[Android] (* <- lang_ru;; *);
+	[Android] (* <- lang_en;; *);;
+
+definition -> definition_of_Android (*
+	-> rrel_key_sc_element: concept_Android;;
+
+	<= nrel_sc_text_translation: ... (*
+		-> [Android - операционная система для мобильных устройств, разработанная компанией Google. Она основана на ядре Linux и используется в смартфонах, планшетах, телевизорах, автомобильных системах и других устройствах.] (* <- lang_ru;; *);;
+		-> [Android is a mobile operating system developed by Google. It is based on the Linux kernel and is used in smartphones, tablets, TVs, car systems and other devices.] (* <- lang_en;; *);;
+		*);;
+		
+	=> nrel_main_idtf:
+		[Опр. (Android)] (* <- lang_ru;; *);
+		[Def. (Android)] (* <- lang_en;; *);;
+		
+	=> nrel_using_constants: {
+		concept_OS;
+		concept_software;
+	};;
+*);;
+
+sc_node_class ->
+	concept_OS;
+	concept_software;;

@@ -1,0 +1,12 @@
+Uber <- concept_application;
+=>nrel_main_idtf:
+    [Uber](* <- lang_ru;;*);
+    [Uber](* <- lang_en;;*);;
+Uberdefinition -> definition_of_Uber (*
+-> rrel_key_sc_element: Uber;;<= nrel_sc_text_translation: ... (*
+     ->[приложение, которое позволяет пассажирам звонить, а водителям взимать плату за проезд и получать оплату] (* <- lang_ru;; *);;
+    ->[an application that allows passengers to hail a ride and drivers to charge fares and get paid] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Uber] (* <- lang_ru;; *);
+    [Def. Uber] (* <- lang_en;; *);;
+*);;

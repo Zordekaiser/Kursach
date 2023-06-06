@@ -1,0 +1,44 @@
+section_subject_domain_of_OS
+
+<- atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная  операционных систем] (* <- lang_ru;; *);
+	[Section. Subject domain of operating systems] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	subject_domain_of_OS;
+	concept_OS;
+	concept_device;
+	concept_smartphone;
+	concept_hardware;
+	concept_software;;
+	
+section_subject_domain_of_OS=[*
+	subject_domain_of_OS
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная операционных систем] (* <- lang_ru;; *);
+		[Subject domain of operating systems] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_OS;
+
+	-> rrel_not_maximum_studied_object_class:
+		concept_device;
+		concept_smartphone;
+		concept_Android;
+		concept_iOS;
+		concept_software;;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_software;;
+*];;
+
+sc_node_class->
+	concept_Android;
+	concept_iOS;
+	concept_representatives;
+	concept_smartphone;
+	concept_software;;

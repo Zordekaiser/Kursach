@@ -1,0 +1,12 @@
+Youtube <- concept_application;
+=>nrel_main_idtf:
+    [Youtube](* <- lang_ru;;*);
+    [Youtube](* <- lang_en;;*);;
+Youtubedefinition -> definition_of_Youtube (*
+-> rrel_key_sc_element: Youtube;;<= nrel_sc_text_translation: ... (*
+     ->[это веб-приложение, предназначенное для обмена видео] (* <- lang_ru;; *);;
+    ->[is a web app designed for sharing video] (* <- lang_en;; *);;
+*);;=> nrel_main_idtf:
+   [Опр. Youtube] (* <- lang_ru;; *);
+    [Def. Youtube] (* <- lang_en;; *);;
+*);;

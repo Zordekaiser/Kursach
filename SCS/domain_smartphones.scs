@@ -1,0 +1,61 @@
+section_subject_domain_of_smartphones
+
+<- non_atomic_section;
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область мобильных телефонов] (* <- lang_ru;; *);
+	[Section. Subject domain of smartphones] (* <- lang_en;; *);
+	
+<= nrel_section_decomposition: {
+	section_subject_domain_of_hardware;
+	section_subject_domain_of_software
+};
+
+<- rrel_key_sc_element:
+	subject_domain_of_smartphones;
+	concept_smartphone;
+	concept_hardware;
+	concept_software;;
+	
+section_subject_domain_of_smartphones=[*
+	subject_domain_of_smartphones
+	<- sc_node_struct;
+	<- subject_domain;
+	=> nrel_main_idtf:
+		[Предметная область мобильных телефонов] (* <- lang_ru;; *);
+		[Subject domain of smartphones] (* <- lang_en;; *);
+
+	-> rrel_maximum_studied_object_class:
+		concept_smartphone;
+
+	-> rrel_not_maximum_studied_object_class:
+		concept_hardware;
+		concept_software;
+		concept_representatives;
+		
+	-> rrel_explored_relation:
+		nrel_OS;
+		nrel_processor;
+		nrel_matrix;
+		nrel_RAM;
+		nrel_HDD;
+		nrel_main_camera;
+		nrel_front_camera;
+		nrel_display_size;
+		nrel_display_resolution;
+		nrel_matrix;
+		nrel_battery;
+
+	<= nrel_private_subject_domain:
+		subject_domain_of_mobile_devices;
+
+	=> nrel_private_subject_domain:
+		subject_domain_of_hardware;
+		subject_domain_of_software;;
+*];;
+
+sc_node_class->
+	concept_representatives;
+	concept_smartphone;
+	concept_hardware;
+	concept_software;;

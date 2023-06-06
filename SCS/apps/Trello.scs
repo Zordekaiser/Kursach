@@ -1,9 +1,0 @@
-Trello<-concept_application;
-=>nrel_main_idtf:
-    [Trello]
-    (* <- lang_ru;; <- name_en;;*);
-=>nrel_definition:...(*
-   <- concept_definition;;
-       =>nrel_main_idtf: [a_web_app_that_empowers_your_team_to_manage_any_type_of_project,_workflow,_or_task_tracking](*<-lang_ru;;*);;
-   =>nrel_main_idtf: [a_web_app_that_empowers_your_team_to_manage_any_type_of_project,_workflow,_or_task_tracking](*<-lang_en;;*);;
-*);;
